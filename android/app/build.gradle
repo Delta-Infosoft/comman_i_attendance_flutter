@@ -1,0 +1,123 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader("UTF-8") { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty("flutter.versionCode")
+if (flutterVersionCode == null) {
+    flutterVersionCode = "1"
+}
+
+def flutterVersionName = localProperties.getProperty("flutter.versionName")
+if (flutterVersionName == null) {
+    flutterVersionName = "1.0"
+}
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+
+android {
+    namespace = "com.waterman_iattandance"
+    compileSdk = 36
+    ndkVersion = "26.1.10909125"
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlin {
+        jvmToolchain(17)
+    }
+
+    defaultConfig {
+        // applicationId is overridden per flavor below
+        minSdkVersion = flutter.minSdkVersion
+        targetSdk = 36
+        multiDexEnabled true
+        versionCode = flutterVersionCode.toInteger()
+        versionName = flutterVersionName
+    }
+
+    // ── Product Flavors ────────────────────────────────────────────────────────
+    flavorDimensions "client"
+
+    productFlavors {
+        waterman {
+            dimension "client"
+            applicationId "com.waterman_iattandance"
+            resValue "string", "app_name", "Waterman iAttendance V2"
+            versionCode 14
+            versionName "1.0.7"
+        }
+        singla {
+            dimension "client"
+            applicationId "com.i.singla.iattendanceapp"
+            resValue "string", "app_name", "Singla iAttendance"
+            versionCode 5
+            versionName "1.0.4"
+        }
+    }
+    // ──────────────────────────────────────────────────────────────────────────
+
+    // ✅ SigningConfigs ko completely comment out karo ya debug ke liye chhodo
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    
+    buildTypes {
+        release {
+            // ✅ Debug keystore use karo (temporary testing ke liye)
+            signingConfig signingConfigs.release
+
+            ndk {
+                abiFilters "arm64-v8a", "armeabi-v7a"
+            }
+
+            firebaseCrashlytics {
+                mappingFileUploadEnabled false
+            }
+
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+    packagingOptions {
+        jniLibs.useLegacyPackaging = true
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    implementation 'androidx.annotation:annotation:1.6.0'
+}

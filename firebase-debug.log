@@ -1,0 +1,27 @@
+[debug] [2026-07-21T11:38:45.260Z] ----------------------------------------------------------------------
+[debug] [2026-07-21T11:38:45.261Z] Command:       /Users/deltainfosoft/.nvm/versions/node/v22.14.0/bin/node /Users/deltainfosoft/.nvm/versions/node/v22.14.0/bin/firebase apps:create ios waterman_iattandance (ios) --bundle-id=com.example.watermanIattandance --json --project=single-motors
+[debug] [2026-07-21T11:38:45.261Z] CLI Version:   14.27.0
+[debug] [2026-07-21T11:38:45.261Z] Platform:      darwin
+[debug] [2026-07-21T11:38:45.261Z] Node Version:  v22.14.0
+[debug] [2026-07-21T11:38:45.262Z] Time:          Tue Jul 21 2026 17:08:45 GMT+0530 (India Standard Time)
+[debug] [2026-07-21T11:38:45.262Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-21T11:38:45.326Z] Object "" in "firebase.json" has unknown property: {"additionalProperty":"flutter"}
+[debug] [2026-07-21T11:38:45.327Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-21T11:38:45.327Z] > authorizing via signed-in user (neel.deltainfosoft@gmail.com)
+[info] Create your IOS app in project single-motors:
+[debug] [2026-07-21T11:38:45.328Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:45.328Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:45.328Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/single-motors/iosApps [none]
+[debug] [2026-07-21T11:38:45.328Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/single-motors/iosApps {"displayName":"waterman_iattandance (ios)","bundleId":"com.example.watermanIattandance"}
+[debug] [2026-07-21T11:38:47.172Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/single-motors/iosApps 200
+[debug] [2026-07-21T11:38:47.172Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/single-motors/iosApps {"name":"operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0"}
+[debug] [2026-07-21T11:38:47.173Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:47.173Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:47.173Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0 [none]
+[debug] [2026-07-21T11:38:47.821Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0 200
+[debug] [2026-07-21T11:38:47.821Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0 {"name":"operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0"}
+[debug] [2026-07-21T11:38:48.323Z] [Create iOS app Poller] Retrying task index 0
+[debug] [2026-07-21T11:38:48.323Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:48.323Z] Checked if tokens are valid: true, expires at: 1784637457410
+[debug] [2026-07-21T11:38:48.324Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MWU5MmNjMzgtZDYwOS00ODAyLWE1ZTUtNzVmZjQ0NGNkMzU0 [none]

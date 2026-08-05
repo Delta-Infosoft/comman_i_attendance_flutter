@@ -1,0 +1,7 @@
+#include "Generated.xcconfig"
+// Waterman flavor configuration
+FLUTTER_TARGET=lib/main_waterman.dart
+PRODUCT_BUNDLE_IDENTIFIER=com.waterman-iattandance
+DISPLAY_NAME=Waterman iAttendance V2
+SERVER_IP=103.113.32.126
+APP_ICON=AppIcon

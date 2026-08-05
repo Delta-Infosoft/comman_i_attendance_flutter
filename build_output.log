@@ -1,0 +1,188 @@
+Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
+Building com.example.watermanIattandance for device (ios-release)...
+Running Xcode build...                                          
+ └─Compiling, linking and signing...                         6.8s
+Xcode build done.                                           16.2s
+Failed to build iOS app
+Error output from Xcode build:
+↳
+    ** BUILD FAILED **
+
+
+Xcode's output:
+↳
+    Writing result bundle at path:
+    	/var/folders/9_/nt4j81n94b7_5c95b5csvt4h0000gn/T/flutter_tools.FZPgwo/flutter_ios_build_temp_dirWfdbfm/temporary_xcresult_bundle
+
+    Can't load Kernel binary: Invalid kernel binary format version.
+    FINE: Pub 3.5.2
+    ERR : flutterfire_cli as globally activated doesn't support Dart 3.5.2.
+        | 
+        | try:
+        | `dart pub global activate flutterfire_cli` to reactivate.
+    FINE: Exception type: DataException
+    FINE: package:pub/src/utils.dart 583:36                                dataError
+        | package:pub/src/global_packages.dart 413:9                       GlobalPackages.find.<fn>
+        | dart:collection                                                  _LinkedHashMapMixin.forEach
+        | package:pub/src/global_packages.dart 404:29                      GlobalPackages.find
+        | package:pub/src/command/global_run.dart 76:44                    GlobalRunCommand.runProtected
+        | package:pub/src/command.dart 197:21                              PubCommand.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:pub/src/utils.dart 137:12                                captureErrors.wrappedCallback
+        | package:stack_trace                                              Chain.capture
+        | package:pub/src/utils.dart 154:11                                captureErrors
+        | package:pub/src/command.dart 196:13                              PubCommand.run
+        | package:args/command_runner.dart 212:27                          CommandRunner.runCommand
+        | package:dartdev/dartdev.dart 236:30                              DartdevRunner.runCommand
+        | package:args/command_runner.dart 122:25                          CommandRunner.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:args/command_runner.dart 122:14                          CommandRunner.run
+        | package:dartdev/dartdev.dart 47:29                               runDartdev
+        | /Volumes/Work/s/w/ir/x/w/sdk/pkg/dartdev/bin/dartdev.dart 13:11  main
+        | ===== asynchronous gap ===========================
+        | dart:async                                                       Future.catchError
+        | package:pub/src/utils.dart 139:10                                captureErrors.wrappedCallback
+        | package:stack_trace                                              Chain.capture
+        | package:pub/src/utils.dart 154:11                                captureErrors
+        | package:pub/src/command.dart 196:13                              PubCommand.run
+        | package:args/command_runner.dart 212:27                          CommandRunner.runCommand
+        | package:dartdev/dartdev.dart 236:30                              DartdevRunner.runCommand
+        | package:args/command_runner.dart 122:25                          CommandRunner.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:args/command_runner.dart 122:14                          CommandRunner.run
+        | package:dartdev/dartdev.dart 47:29                               runDartdev
+        | /Volumes/Work/s/w/ir/x/w/sdk/pkg/dartdev/bin/dartdev.dart 13:11  main
+    ---- Log transcript ----
+    FINE: Pub 3.5.2
+    ERR : flutterfire_cli as globally activated doesn't support Dart 3.5.2.
+        | 
+        | try:
+        | `dart pub global activate flutterfire_cli` to reactivate.
+    FINE: Exception type: DataException
+    FINE: package:pub/src/utils.dart 583:36                                dataError
+        | package:pub/src/global_packages.dart 413:9                       GlobalPackages.find.<fn>
+        | dart:collection                                                  _LinkedHashMapMixin.forEach
+        | package:pub/src/global_packages.dart 404:29                      GlobalPackages.find
+        | package:pub/src/command/global_run.dart 76:44                    GlobalRunCommand.runProtected
+        | package:pub/src/command.dart 197:21                              PubCommand.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:pub/src/utils.dart 137:12                                captureErrors.wrappedCallback
+        | package:stack_trace                                              Chain.capture
+        | package:pub/src/utils.dart 154:11                                captureErrors
+        | package:pub/src/command.dart 196:13                              PubCommand.run
+        | package:args/command_runner.dart 212:27                          CommandRunner.runCommand
+        | package:dartdev/dartdev.dart 236:30                              DartdevRunner.runCommand
+        | package:args/command_runner.dart 122:25                          CommandRunner.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:args/command_runner.dart 122:14                          CommandRunner.run
+        | package:dartdev/dartdev.dart 47:29                               runDartdev
+        | /Volumes/Work/s/w/ir/x/w/sdk/pkg/dartdev/bin/dartdev.dart 13:11  main
+        | ===== asynchronous gap ===========================
+        | dart:async                                                       Future.catchError
+        | package:pub/src/utils.dart 139:10                                captureErrors.wrappedCallback
+        | package:stack_trace                                              Chain.capture
+        | package:pub/src/utils.dart 154:11                                captureErrors
+        | package:pub/src/command.dart 196:13                              PubCommand.run
+        | package:args/command_runner.dart 212:27                          CommandRunner.runCommand
+        | package:dartdev/dartdev.dart 236:30                              DartdevRunner.runCommand
+        | package:args/command_runner.dart 122:25                          CommandRunner.run.<fn>
+        | dart:async                                                       new Future.sync
+        | package:args/command_runner.dart 122:14                          CommandRunner.run
+        | package:dartdev/dartdev.dart 47:29                               runDartdev
+        | /Volumes/Work/s/w/ir/x/w/sdk/pkg/dartdev/bin/dartdev.dart 13:11  main
+    ---- End log transcript ----
+    IO  : Writing 14314 characters to text file /Users/deltainfosoft/.pub-cache/log/pub_log.txt.
+    MSG : Logs written to /Users/deltainfosoft/.pub-cache/log/pub_log.txt.
+    Command PhaseScriptExecution failed with a nonzero exit code
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'DKImagePickerController-DKImagePickerController' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleUtilities-GoogleUtilities_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleMaps-GoogleMapsResources' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCoreInternal-FirebaseCoreInternal_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'PromisesObjC-FBLPromises_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleMaps' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'DKPhotoGallery-DKPhotoGallery' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'url_launcher_ios-url_launcher_ios_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'webview_flutter_wkwebview-webview_flutter_wkwebview_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'shared_preferences_foundation-shared_preferences_foundation_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'path_provider_foundation-path_provider_foundation_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'package_info_plus-package_info_plus_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'image_picker_ios-image_picker_ios_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'geolocator_apple-geolocator_apple_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'google_maps_flutter_ios-google_maps_flutter_ios_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'fluttertoast-fluttertoast_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'geocoding_ios-geocoding_ios_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'flutter_local_notifications-flutter_local_notifications_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'file_picker-file_picker_ios_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'device_info_plus-device_info_plus_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'battery_plus-batery_plus_privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Toast-Toast' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'SwiftyGif-SwiftyGif' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'SDWebImage-SDWebImage' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'ReachabilitySwift-ReachabilitySwift' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'PromisesSwift-Promises_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleDataTransport-GoogleDataTransport_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GTMSessionFetcher-GTMSessionFetcher_Core_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseInstallations-FirebaseInstallations_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCoreExtension-FirebaseCoreExtension_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseABTesting-FirebaseABTesting_Privacy' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'PromisesObjC' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseAppCheckInterop' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Google-Maps-iOS-Utils' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Toast' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'SDWebImage' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'ReachabilitySwift' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleUtilities' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'SwiftyGif' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'nanopb' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCoreInternal' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'DKPhotoGallery' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCore' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleAppMeasurement' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'DKImagePickerController' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GTMSessionFetcher' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseInstallations' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCoreExtension' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseABTesting' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'RecaptchaInterop' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'GoogleDataTransport' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseSharedSwift' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'PromisesSwift' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseSessions' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseAnalytics' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseAuth' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseCrashlytics' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseMessaging' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'FirebaseRemoteConfig' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'battery_plus' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_core' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'connectivity_plus' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'device_info_plus' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'file_picker' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_analytics' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_auth' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_crashlytics' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_messaging' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'firebase_remote_config' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'flutter_background_service_ios' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'flutter_local_notifications' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'fluttertoast' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'geocoding_ios' from project 'Pods')
+    warning: no rule to process file '/Users/deltainfosoft/.pub-cache/hosted/pub.dev/geocoding_ios-3.1.0/ios/geocoding_ios/Sources/geocoding_ios/PrivacyInfo.xcprivacy' of type 'text.xml' for architecture 'arm64' (in target 'geocoding_ios' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'geolocator_apple' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'google_maps_flutter_ios' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'image_picker_ios' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'package_info_plus' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'path_provider_foundation' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'permission_handler_apple' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'shared_preferences_foundation' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'url_launcher_ios' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'webview_flutter_wkwebview' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Pods-Runner' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Runner' from project 'Runner')
+    note: Run script build phase 'Run Script' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+    note: Run script build phase 'Thin Binary' will be run during every build because the option to run the script phase "Based on dependency analysis" is unchecked. (in target 'Runner' from project 'Runner')
+    warning: Run script build phase 'FlutterFire: "flutterfire upload-crashlytics-symbols"' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'Runner' from project 'Runner')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Flutter' from project 'Pods')
+    note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Firebase' from project 'Pods')
+
+Encountered error while building for device.

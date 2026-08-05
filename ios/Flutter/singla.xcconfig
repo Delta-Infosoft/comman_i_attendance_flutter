@@ -1,0 +1,19 @@
+#include "Generated.xcconfig"
+
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug-singla.xcconfig"
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.release-singla.xcconfig"
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.profile-singla.xcconfig"
+
+// Singla flavor configuration
+FLUTTER_TARGET=lib/main_singla.dart
+PRODUCT_BUNDLE_IDENTIFIER=com.i.singla.iattendanceapp
+DISPLAY_NAME=Singla iAttendance
+SERVER_IP=103.168.19.137
+APP_ICON=AppIcon-Singla
+
+// Dynamic version overrides
+FLUTTER_BUILD_NAME=1.0.0
+FLUTTER_BUILD_NUMBER=1
+
+
+

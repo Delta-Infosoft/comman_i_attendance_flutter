@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>7699BB3E-604E-4BD9-B88C-248C6D807FE5</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7699BB3E-604E-4BD9-B88C-248C6D807FE5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Runner project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Runner</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning workspace Runner with scheme Runner</string>
+			<key>timeStartedRecording</key>
+			<real>786706875.75943398</real>
+			<key>timeStoppedRecording</key>
+			<real>786706875.90370405</real>
+			<key>title</key>
+			<string>Cleaning workspace Runner with scheme Runner</string>
+			<key>uniqueIdentifier</key>
+			<string>7699BB3E-604E-4BD9-B88C-248C6D807FE5</string>
+		</dict>
+		<key>E523F5CD-A473-4AD8-887B-4B016A38F220</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E523F5CD-A473-4AD8-887B-4B016A38F220.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Runner project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Flutter Assemble</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning workspace Runner with scheme Flutter Assemble</string>
+			<key>timeStartedRecording</key>
+			<real>786706875.20378101</real>
+			<key>timeStoppedRecording</key>
+			<real>786706875.33855295</real>
+			<key>title</key>
+			<string>Cleaning workspace Runner with scheme Flutter Assemble</string>
+			<key>uniqueIdentifier</key>
+			<string>E523F5CD-A473-4AD8-887B-4B016A38F220</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.i.singla.iattendanceapp",
+  "variantName": "singlaRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 3,
+      "versionName": "1.0.3",
+      "outputFile": "app-singla-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

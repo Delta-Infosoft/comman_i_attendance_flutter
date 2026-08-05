@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "622997241417",
+    "project_id": "watermaniattandanceapp",
+    "storage_bucket": "watermaniattandanceapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622997241417:android:2cf96de61898a1380b4998",
+        "android_client_info": {
+          "package_name": "com.example.waterman_iattandance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfPjQB_YBhGochjYUXoYoQWVlMX0X-GZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622997241417:android:be703ada18d10c260b4998",
+        "android_client_info": {
+          "package_name": "com.waterman_iattandance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfPjQB_YBhGochjYUXoYoQWVlMX0X-GZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

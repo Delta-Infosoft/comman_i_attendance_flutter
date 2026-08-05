@@ -1,0 +1,7 @@
+#include "Generated.xcconfig"
+// Singla flavor configuration
+FLUTTER_TARGET=lib/main_singla.dart
+PRODUCT_BUNDLE_IDENTIFIER=com.i.singla.iattendanceapp
+DISPLAY_NAME=Singla iAttendance
+SERVER_IP=103.168.19.137
+APP_ICON=AppIcon-Singla

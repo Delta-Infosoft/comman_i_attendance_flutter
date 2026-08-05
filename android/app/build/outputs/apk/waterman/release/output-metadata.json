@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.waterman_iattandance",
+  "variantName": "watermanRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 14,
+      "versionName": "1.0.7",
+      "outputFile": "app-waterman-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

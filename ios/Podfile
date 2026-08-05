@@ -1,0 +1,98 @@
+platform :ios, '14.0'
+
+$FirebaseSDKVersion = '10.21.0'
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Debug-singla' => :debug,
+  'Debug-waterman' => :debug,
+  'Profile' => :release,
+  'Profile-singla' => :release,
+  'Profile-waterman' => :release,
+  'Release' => :release,
+  'Release-singla' => :release,
+  'Release-waterman' => :release,
+}
+
+def flutter_root
+  generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)
+  unless File.exist?(generated_xcode_build_settings_path)
+    raise "#{generated_xcode_build_settings_path} must exist. Run flutter pub get first."
+  end
+
+  File.foreach(generated_xcode_build_settings_path) do |line|
+    matches = line.match(/FLUTTER_ROOT\=(.*)/)
+    return matches[1].strip if matches
+  end
+  raise "FLUTTER_ROOT not found in #{generated_xcode_build_settings_path}"
+end
+
+require File.expand_path(File.join('packages', 'flutter_tools', 'bin', 'podhelper'), flutter_root)
+
+flutter_ios_podfile_setup
+
+target 'Runner' do
+  use_frameworks! :linkage => :static
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+
+  # Firebase pods with locked version
+  pod 'Firebase/Core', $FirebaseSDKVersion
+  pod 'Firebase/Messaging', $FirebaseSDKVersion
+  pod 'Firebase/RemoteConfig', $FirebaseSDKVersion
+  pod 'Firebase/Crashlytics', $FirebaseSDKVersion
+  pod 'Firebase/Analytics', $FirebaseSDKVersion
+  pod 'Firebase/Auth', $FirebaseSDKVersion
+
+  target 'RunnerTests' do
+    inherit! :search_paths
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    flutter_additional_ios_build_settings(target)
+
+    # Force all targets to iOS 14.0 to resolve deployment target warnings
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
+      
+      # Enable permissions for permission_handler
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_LOCATION=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_LOCATION_WHENINUSE=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_LOCATION_ALWAYS=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_CAMERA=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_PHOTOS=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'PERMISSION_NOTIFICATIONS=1'
+
+      # Fix non-modular header errors for Firebase and Auth
+      if target.name.start_with?('Firebase') || target.name == 'firebase_auth'
+      config.build_settings['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+      config.build_settings['DEFINES_MODULE'] = 'YES'
+      end
+
+      # Firebase specific preprocessor definitions
+      if target.name.start_with?('Firebase')
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << "FIREBASE_POD_VERSION=#{$FirebaseSDKVersion}"
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << "Firebase_VERSION=\\\"#{$FirebaseSDKVersion}\\\""
+      end
+    end
+
+    # Fix NanoPB missing symbols for Crashlytics / Sessions
+    if ['FirebaseSessions', 'FirebaseCrashlytics', 'Firebase-CoreDiagnostics'].include?(target.name)
+      target.build_configurations.each do |config|
+        config.build_settings['HEADER_SEARCH_PATHS'] ||= ['$(inherited)']
+        config.build_settings['HEADER_SEARCH_PATHS'] << '"${PODS_ROOT}/nanopb"'
+        config.build_settings['HEADER_SEARCH_PATHS'] << '"${PODS_ROOT}/FirebaseSessions/FirebaseSessions/SourcesObjC/NanoPB"'
+        config.build_settings['HEADER_SEARCH_PATHS'] << '"${PODS_ROOT}/FirebaseSessions/ProtoSupport/nanopb"'
+
+        config.build_settings['OTHER_CFLAGS'] ||= ['$(inherited)']
+        config.build_settings['OTHER_CFLAGS'] << '-DPB_ENABLE_MALLOC'
+        config.build_settings['OTHER_CFLAGS'] << '-DPB_USE_LEGACY_API'
+      end
+    end
+  end
+end

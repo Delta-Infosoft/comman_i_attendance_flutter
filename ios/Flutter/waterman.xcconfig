@@ -1,0 +1,19 @@
+#include "Generated.xcconfig"
+
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug-waterman.xcconfig"
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.release-waterman.xcconfig"
+#include "Pods/Target Support Files/Pods-Runner/Pods-Runner.profile-waterman.xcconfig"
+
+// Waterman flavor configuration
+FLUTTER_TARGET=lib/main_waterman.dart
+PRODUCT_BUNDLE_IDENTIFIER=com.waterman-iattandance
+DISPLAY_NAME=Waterman iAttendance V2
+SERVER_IP=103.113.32.126
+APP_ICON=AppIcon
+
+// Dynamic version overrides
+FLUTTER_BUILD_NAME=1.0.10
+FLUTTER_BUILD_NUMBER=1
+
+
+

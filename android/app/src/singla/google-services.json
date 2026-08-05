@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1075219872908",
+    "project_id": "single-motors",
+    "storage_bucket": "single-motors.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075219872908:android:a2fc44fd435ecd0c1c0fa9",
+        "android_client_info": {
+          "package_name": "com.i.singla.iattendanceapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAr5GJ-iYrAIWI2j9PDNrUy0Ei6VdRkc0Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
