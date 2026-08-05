@@ -98,10 +98,10 @@ class _DealerCheckInReportScreenState
             title = 'Attendance Check-In';
           } else if (item.type == 'DealerCheckIn') {
             hue = BitmapDescriptor.hueRed;
-            title = 'Dealer Check-In';
+            title = 'Client Check-In';
           } else if (item.type == 'DealerCheckOut') {
             hue = BitmapDescriptor.hueOrange;
-            title = 'Dealer Check-Out';
+            title = 'Client Check-Out';
           } else if (item.type.toLowerCase().contains('checkout')) {
             hue = BitmapDescriptor.hueOrange;
           } else if (item.type.toLowerCase().contains('checkin')) {
@@ -241,7 +241,7 @@ class _DealerCheckInReportScreenState
         bottom: FlavorConfig.instance.getAppBarBottom(),
         leading: FlavorConfig.instance.getAppBarLeading(context),
         title: const Text(
-          "Dealer Check-In Route & Report",
+          "Client Check-In Route & Report",
           style: TextStyle(
             color: Colors.black87,
             fontSize: 18,

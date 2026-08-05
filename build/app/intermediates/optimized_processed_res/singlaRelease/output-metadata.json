@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "OPTIMIZED_PROCESSED_RES",
+    "kind": "Directory"
+  },
+  "applicationId": "com.i.singla.iattendanceapp",
+  "variantName": "singlaRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 5,
+      "versionName": "1.0.4",
+      "outputFile": "resources-singla-release-optimize.ap_"
+    }
+  ],
+  "elementType": "File"
+}

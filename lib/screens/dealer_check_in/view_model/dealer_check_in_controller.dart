@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:waterman_iattandance/constant/local_db/local_db.dart';
 import 'package:waterman_iattandance/widget/custom_snackbar.dart';
+import '../helper/image_watermark_helper.dart';
 import '../model/dealer_check_in_model.dart';
 import '../repository/dealer_check_in_repository.dart';
+import '../view/dual_camera_screen.dart';
 import '../../daily_tour_details/view/create_daily_tour_details_screen.dart';
 import '../../home/view/home_screen.dart';
 
@@ -32,6 +33,7 @@ class DealerCheckInController extends GetxController {
   final remarkController = TextEditingController();
 
   var photoFile = Rxn<File>();
+  var frontPhotoFile = Rxn<File>();
   var currentAddress = ''.obs;
   var formattedDateTime = ''.obs;
   var latitude = 0.0.obs;
@@ -41,8 +43,6 @@ class DealerCheckInController extends GetxController {
   var isCheckedIn = false.obs;
   var activeCheckInItem = Rxn<DealerCheckInStatusItem>();
   var todayStatusList = <DealerCheckInStatusItem>[].obs;
-
-  final ImagePicker _picker = ImagePicker();
 
   String get mobileNo => LocalDbController.to.mobileNo;
   String get empId {
@@ -174,23 +174,12 @@ class DealerCheckInController extends GetxController {
     }
   }
 
-  /// Capture Photo with GPS
+  /// Capture Photo with Dual Camera (Rear + Front) & GPS Watermark
   Future<void> captureGpsPhoto(BuildContext context) async {
     try {
       isCapturingPhoto.value = true;
 
-      final XFile? image = await _picker.pickImage(
-        source: ImageSource.camera,
-        imageQuality: 80,
-        maxWidth: 1200,
-        maxHeight: 1200,
-      );
-
-      if (image == null) {
-        isCapturingPhoto.value = false;
-        return;
-      }
-
+      // 1. Check GPS location service
       bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
         AppSnackBar.warning("GPS Disabled", "Please turn on GPS location service.");
@@ -198,6 +187,7 @@ class DealerCheckInController extends GetxController {
         return;
       }
 
+      // 2. Check location permissions
       LocationPermission permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
@@ -208,6 +198,20 @@ class DealerCheckInController extends GetxController {
         }
       }
 
+      // 3. Launch Dual Camera screen (captures Rear first, then Front sequentially)
+      final result = await Get.to<Map<String, String>>(() => const DualCameraScreen());
+
+      if (result == null || result['back'] == null || result['back']!.isEmpty) {
+        isCapturingPhoto.value = false;
+        return;
+      }
+
+      final backFile = File(result['back']!);
+      final frontFile = result['front'] != null && result['front']!.isNotEmpty
+          ? File(result['front']!)
+          : null;
+
+      // 4. Retrieve current location & address
       Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high,
       );
@@ -229,11 +233,23 @@ class DealerCheckInController extends GetxController {
       } catch (_) {}
 
       if (currentAddress.value.isEmpty) {
-        currentAddress.value = "Lat: ${position.latitude.toStringAsFixed(4)}, Long: ${position.longitude.toStringAsFixed(4)}";
+        currentAddress.value =
+            "Lat: ${position.latitude.toStringAsFixed(4)}, Long: ${position.longitude.toStringAsFixed(4)}";
       }
 
-      formattedDateTime.value = DateFormat('dd-MMM-yyyy hh:mm a').format(DateTime.now());
-      photoFile.value = File(image.path);
+      formattedDateTime.value =
+          DateFormat('dd-MMM-yyyy hh:mm a').format(DateTime.now());
+
+      // 5. Merge Rear & Front photos into 1 image and watermark with Location + Timestamp
+      final mergedFile = await ImageWatermarkHelper.mergePhotosWithWatermark(
+        backPhoto: backFile,
+        frontPhoto: frontFile,
+        address: currentAddress.value,
+        dateTime: formattedDateTime.value,
+      );
+
+      photoFile.value = mergedFile;
+      frontPhotoFile.value = frontFile;
 
     } catch (e) {
       AppSnackBar.error("Capture Error", "Failed to capture photo: $e");
@@ -274,9 +290,11 @@ class DealerCheckInController extends GetxController {
 
     // Ensure GPS position
     if (latitude.value == 0.0 && longitude.value == 0.0) {
-      Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
-      latitude.value = position.latitude;
-      longitude.value = position.longitude;
+      try {
+        Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+        latitude.value = position.latitude;
+        longitude.value = position.longitude;
+      } catch (_) {}
     }
 
     isSubmitting.value = true;
@@ -295,10 +313,12 @@ class DealerCheckInController extends GetxController {
         inTime: nowStr,
         outTime: '', // Check-In -> empty OutTime
         photoFile: photoFile.value,
+        frontPhotoFile: frontPhotoFile.value,
       );
+      print('CHeck in photo>>>>>>: ${photoFile.value}');
 
       if (res['status'] == "200" || res['status'] == 200) {
-        AppSnackBar.success("Check-In Successful", "Dealer Check-In recorded successfully.");
+        AppSnackBar.success("Check-In Successful", "Client Check-In recorded successfully.");
         // Navigate back to Home screen after successful Check-In
         await Future.delayed(const Duration(milliseconds: 800));
         Get.offAll(() => const HomeScreen());
@@ -314,14 +334,13 @@ class DealerCheckInController extends GetxController {
 
   /// Perform Check-Out Flow
   Future<void> _handleCheckOutFlow(BuildContext context) async {
-    // ── Step 1: GPS photo MUST be captured FIRST before anything else ──
-    if (photoFile.value == null) {
-      AppSnackBar.warning(
-        "GPS Photo Required",
-        "Please capture a GPS photo before Check-Out.",
-        context: context,
-      );
-      return;
+    // Ensure GPS position even if photo was not captured
+    if (latitude.value == 0.0 && longitude.value == 0.0) {
+      try {
+        Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+        latitude.value = position.latitude;
+        longitude.value = position.longitude;
+      } catch (_) {}
     }
 
     final active = activeCheckInItem.value;
@@ -382,10 +401,11 @@ class DealerCheckInController extends GetxController {
         inTime: '', // Check-Out -> empty InTime
         outTime: nowStr,
         photoFile: photoFile.value,
+        frontPhotoFile: frontPhotoFile.value,
       );
 
       if (res['status'] == "200" || res['status'] == 200) {
-        AppSnackBar.success("Check-Out Successful", "Dealer Check-Out completed successfully.");
+        AppSnackBar.success("Check-Out Successful", "Client Check-Out completed successfully.");
         // Navigate back to Home screen after successful Check-Out
         await Future.delayed(const Duration(milliseconds: 800));
         Get.offAll(() => const HomeScreen());

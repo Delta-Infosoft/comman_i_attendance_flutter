@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../flavor_config.dart';
@@ -40,7 +39,7 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
         bottom: FlavorConfig.instance.getAppBarBottom(),
         leading: FlavorConfig.instance.getAppBarLeading(context),
         title: const Text(
-          "Dealer Check-In",
+          "Client Check-In",
           style: TextStyle(
             color: Colors.black87,
             fontSize: 20,
@@ -278,16 +277,19 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
 
                     const SizedBox(height: 24),
 
-                    // ── 4. GPS Photo Capture Card (MANDATORY) ───────────────
+                    // ── 4. GPS Photo Capture Card ────────────────────────────
                     Obx(() {
                       final photo = controller.photoFile.value;
                       final isCapturing = controller.isCapturingPhoto.value;
                       final photoCaptured = photo != null;
+                      final isCheckedIn = controller.isCheckedIn.value;
+                      // Photo is mandatory for Check-In, optional for Check-Out
+                      final isPhotoMandatory = !isCheckedIn;
 
                       return Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Required label row
+                          // Label row
                           Row(
                             children: [
                               Text(
@@ -304,17 +306,25 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                 decoration: BoxDecoration(
                                   color: photoCaptured
                                       ? const Color(0xFFE8F5E9)
-                                      : const Color(0xFFFFEBEE),
+                                      : isPhotoMandatory
+                                          ? const Color(0xFFFFEBEE)
+                                          : const Color(0xFFF5F5F5),
                                   borderRadius: BorderRadius.circular(4),
                                 ),
                                 child: Text(
-                                  photoCaptured ? "✓ Captured" : "* Required",
+                                  photoCaptured
+                                      ? "✓ Captured"
+                                      : isPhotoMandatory
+                                          ? "* Required"
+                                          : "Optional",
                                   style: TextStyle(
                                     fontSize: 11,
                                     fontWeight: FontWeight.bold,
                                     color: photoCaptured
                                         ? const Color(0xFF2E7D32)
-                                        : const Color(0xFFC62828),
+                                        : isPhotoMandatory
+                                            ? const Color(0xFFC62828)
+                                            : Colors.grey.shade600,
                                   ),
                                 ),
                               ),
@@ -328,17 +338,20 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(16),
                               border: Border.all(
-                                // Red border when photo not yet taken, green when captured
                                 color: photoCaptured
                                     ? const Color(0xFF81C784)
-                                    : const Color(0xFFEF5350),
-                                width: photoCaptured ? 1 : 1.8,
+                                    : isPhotoMandatory
+                                        ? const Color(0xFFEF5350)
+                                        : Colors.grey.shade300,
+                                width: photoCaptured ? 1 : (isPhotoMandatory ? 1.8 : 1),
                               ),
                               boxShadow: [
                                 BoxShadow(
                                   color: photoCaptured
                                       ? Colors.green.withOpacity(0.05)
-                                      : Colors.red.withOpacity(0.08),
+                                      : isPhotoMandatory
+                                          ? Colors.red.withOpacity(0.08)
+                                          : Colors.black.withOpacity(0.03),
                                   blurRadius: 10,
                                   offset: const Offset(0, 4),
                                 ),
@@ -355,12 +368,16 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                       height: 200,
                                       width: double.infinity,
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFFFF5F5),
+                                        color: isPhotoMandatory
+                                            ? const Color(0xFFFFF5F5)
+                                            : const Color(0xFFF8F9FA),
                                         borderRadius: BorderRadius.circular(12),
                                         border: Border.all(
-                                          color: const Color(0xFFEF5350).withOpacity(0.5),
+                                          color: isPhotoMandatory
+                                              ? const Color(0xFFEF5350).withOpacity(0.5)
+                                              : Colors.grey.shade300,
                                           style: BorderStyle.solid,
-                                          width: 1.5,
+                                          width: isPhotoMandatory ? 1.5 : 1.2,
                                         ),
                                       ),
                                       child: Column(
@@ -371,50 +388,60 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                           else ...[
                                             Container(
                                               padding: const EdgeInsets.all(14),
-                                              decoration: const BoxDecoration(
-                                                color: Color(0xFFFFEBEE),
+                                              decoration: BoxDecoration(
+                                                color: isPhotoMandatory
+                                                    ? const Color(0xFFFFEBEE)
+                                                    : primaryColor.withOpacity(0.08),
                                                 shape: BoxShape.circle,
                                               ),
-                                              child: const Icon(
+                                              child: Icon(
                                                 Icons.camera_alt_rounded,
                                                 size: 36,
-                                                color: Color(0xFFC62828),
+                                                color: isPhotoMandatory
+                                                    ? const Color(0xFFC62828)
+                                                    : primaryColor,
                                               ),
                                             ),
                                             const SizedBox(height: 12),
-                                            const Text(
+                                            Text(
                                               "Tap to Capture GPS Photo",
                                               style: TextStyle(
-                                                color: Color(0xFFC62828),
+                                                color: isPhotoMandatory
+                                                    ? const Color(0xFFC62828)
+                                                    : primaryColor,
                                                 fontSize: 16,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                             ),
                                             const SizedBox(height: 4),
                                             Text(
-                                              "Location & timestamp will be attached",
+                                              isPhotoMandatory
+                                                  ? "Location & timestamp will be attached"
+                                                  : "Location & timestamp will be attached (Optional)",
                                               style: TextStyle(
                                                 color: Colors.grey.shade600,
                                                 fontSize: 12,
                                               ),
                                             ),
-                                            const SizedBox(height: 8),
-                                            Container(
-                                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                              decoration: BoxDecoration(
-                                                color: const Color(0xFFFFEBEE),
-                                                borderRadius: BorderRadius.circular(20),
-                                                border: Border.all(color: const Color(0xFFEF9A9A)),
-                                              ),
-                                              child: const Text(
-                                                "⚠ Mandatory for Check-In & Check-Out",
-                                                style: TextStyle(
-                                                  fontSize: 11,
-                                                  color: Color(0xFFC62828),
-                                                  fontWeight: FontWeight.w600,
+                                            if (isPhotoMandatory) ...[
+                                              const SizedBox(height: 8),
+                                              Container(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                                decoration: BoxDecoration(
+                                                  color: const Color(0xFFFFEBEE),
+                                                  borderRadius: BorderRadius.circular(20),
+                                                  border: Border.all(color: const Color(0xFFEF9A9A)),
+                                                ),
+                                                child: const Text(
+                                                  "⚠ Mandatory for Check-In",
+                                                  style: TextStyle(
+                                                    fontSize: 11,
+                                                    color: Color(0xFFC62828),
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
                                                 ),
                                               ),
-                                            ),
+                                            ],
                                           ],
                                         ],
                                       ),
@@ -425,45 +452,10 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                     children: [
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(12),
-                                        child: Stack(
-                                          alignment: Alignment.bottomCenter,
-                                          children: [
-                                            Image.file(
-                                              photo,
-                                              height: 240,
-                                              width: double.infinity,
-                                              fit: BoxFit.cover,
-                                            ),
-                                            Container(
-                                              width: double.infinity,
-                                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                                              color: Colors.black.withOpacity(0.65),
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                mainAxisSize: MainAxisSize.min,
-                                                children: [
-                                                  if (controller.currentAddress.value.isNotEmpty)
-                                                    Text(
-                                                      "Location: ${controller.currentAddress.value}",
-                                                      style: const TextStyle(
-                                                        color: Colors.white,
-                                                        fontSize: 11,
-                                                        fontWeight: FontWeight.w500,
-                                                      ),
-                                                      maxLines: 1,
-                                                      overflow: TextOverflow.ellipsis,
-                                                    ),
-                                                  Text(
-                                                    controller.formattedDateTime.value,
-                                                    style: const TextStyle(
-                                                      color: Colors.white70,
-                                                      fontSize: 10,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
+                                        child: Image.file(
+                                          photo,
+                                          width: double.infinity,
+                                          fit: BoxFit.fitWidth,
                                         ),
                                       ),
                                       Positioned(
@@ -474,7 +466,7 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                           child: Container(
                                             padding: const EdgeInsets.all(6),
                                             decoration: BoxDecoration(
-                                              color: Colors.black.withOpacity(0.6),
+                                              color: Colors.black.withOpacity(0.65),
                                               shape: BoxShape.circle,
                                             ),
                                             child: const Icon(
@@ -496,21 +488,29 @@ class _DealerCheckInScreenState extends State<DealerCheckInScreen> {
                                     Icon(
                                       photoCaptured
                                           ? Icons.check_circle_rounded
-                                          : Icons.error_outline_rounded,
+                                          : isPhotoMandatory
+                                              ? Icons.error_outline_rounded
+                                              : Icons.info_outline_rounded,
                                       color: photoCaptured
                                           ? const Color(0xFF2E7D32)
-                                          : const Color(0xFFC62828),
+                                          : isPhotoMandatory
+                                              ? const Color(0xFFC62828)
+                                              : Colors.grey.shade600,
                                       size: 20,
                                     ),
                                     const SizedBox(width: 8),
                                     Text(
                                       photoCaptured
                                           ? "GPS Photo Captured Successfully"
-                                          : "GPS Photo Not Captured — Required!",
+                                          : isPhotoMandatory
+                                              ? "GPS Photo Not Captured — Required!"
+                                              : "GPS Photo Not Captured (Optional)",
                                       style: TextStyle(
                                         color: photoCaptured
                                             ? Colors.black87
-                                            : const Color(0xFFC62828),
+                                            : isPhotoMandatory
+                                                ? const Color(0xFFC62828)
+                                                : Colors.grey.shade700,
                                         fontSize: 14,
                                         fontWeight: FontWeight.w600,
                                       ),

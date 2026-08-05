@@ -115,6 +115,7 @@ class DealerCheckInRepository {
     required String inTime,
     required String outTime,
     File? photoFile,
+    File? frontPhotoFile,
   }) async {
     try {
       final uri = Uri.parse("${baseUrl}API_DealerCheckInOut.aspx");
@@ -140,6 +141,12 @@ class DealerCheckInRepository {
       if (photoFile != null && await photoFile.exists()) {
         request.files.add(
           await http.MultipartFile.fromPath('PhotoPath', photoFile.path),
+        );
+      }
+
+      if (frontPhotoFile != null && await frontPhotoFile.exists()) {
+        request.files.add(
+          await http.MultipartFile.fromPath('PhotoPath2', frontPhotoFile.path),
         );
       }
 

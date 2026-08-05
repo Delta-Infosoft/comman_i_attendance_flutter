@@ -209,10 +209,10 @@ class _AttendanceDrawerState extends State<AttendanceDrawer> {
                     },
                   ),
 
-                  if (FlavorConfig.instance.hasMenu(MenuOption.DEALER_CHECK_IN))
+                  if (FlavorConfig.instance.hasMenu(MenuOption.CLIENT_CHECK_IN))
                   _DrawerItem(
                     icon: Icons.storefront_rounded,
-                    text: "Dealer Check-In",
+                    text: "Client Check-In",
                     onPress: () {
                       Navigator.pop(context);
                       Get.to(() => const DealerCheckInScreen());

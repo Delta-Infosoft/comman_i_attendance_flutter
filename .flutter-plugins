@@ -2,6 +2,10 @@
 android_alarm_manager_plus=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/android_alarm_manager_plus-4.0.8/
 android_intent_plus=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/android_intent_plus-5.3.1/
 battery_plus=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/battery_plus-6.0.2/
+camera=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/camera-0.11.0+2/
+camera_android_camerax=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.10+3/
+camera_avfoundation=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/camera_avfoundation-0.9.19/
+camera_web=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/camera_web-0.3.5/
 connectivity_plus=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/connectivity_plus-5.0.2/
 device_info_plus=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/device_info_plus-10.1.2/
 file_picker=/Users/deltainfosoft/.pub-cache/hosted/pub.dev/file_picker-8.0.7/

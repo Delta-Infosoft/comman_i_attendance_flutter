@@ -35,12 +35,22 @@ class NewCustomerDealerController extends GetxController {
   }
 
   Future<void> loadCurrentLocation() async {
-    final pos = await _getCurrentLocation();
-
-    currentPosition = pos;
-    currentLatLng = LatLng(pos.latitude, pos.longitude);
-
-    update(); // GetX refresh
+    try {
+      final pos = await _getCurrentLocation();
+      currentPosition = pos;
+      currentLatLng = LatLng(pos.latitude, pos.longitude);
+      update(); // GetX refresh
+    } catch (e) {
+      debugPrint("Error loading current location: $e");
+      try {
+        final lastKnown = await Geolocator.getLastKnownPosition();
+        if (lastKnown != null) {
+          currentPosition = lastKnown;
+          currentLatLng = LatLng(lastKnown.latitude, lastKnown.longitude);
+          update();
+        }
+      } catch (_) {}
+    }
   }
 
   Future<Position> _getCurrentLocation() async {
@@ -49,6 +59,8 @@ class NewCustomerDealerController extends GetxController {
 
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
+      final lastKnown = await Geolocator.getLastKnownPosition();
+      if (lastKnown != null) return lastKnown;
       throw Exception('Location service disabled');
     }
 
@@ -56,11 +68,15 @@ class NewCustomerDealerController extends GetxController {
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
+        final lastKnown = await Geolocator.getLastKnownPosition();
+        if (lastKnown != null) return lastKnown;
         throw Exception('Location permission denied');
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
+      final lastKnown = await Geolocator.getLastKnownPosition();
+      if (lastKnown != null) return lastKnown;
       throw Exception('Location permission permanently denied');
     }
 
@@ -77,11 +93,17 @@ class NewCustomerDealerController extends GetxController {
     String? photoPath4,
   }) async {
     if (currentPosition == null) {
-      throw Exception("Location not available");
+      try {
+        currentPosition = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high,
+        );
+      } catch (_) {
+        currentPosition = await Geolocator.getLastKnownPosition();
+      }
     }
 
-    double latitude = currentPosition!.latitude;
-    double longitude = currentPosition!.longitude;
+    double latitude = currentPosition?.latitude ?? currentLatLng?.latitude ?? 0.0;
+    double longitude = currentPosition?.longitude ?? currentLatLng?.longitude ?? 0.0;
 
     Map<String, dynamic> dataMap = {
       'CompanyName': companyNameController.text,
@@ -161,11 +183,17 @@ class NewCustomerDealerController extends GetxController {
     String? photoPath4,
   }) async {
     if (currentPosition == null) {
-      throw Exception("Location not available");
+      try {
+        currentPosition = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high,
+        );
+      } catch (_) {
+        currentPosition = await Geolocator.getLastKnownPosition();
+      }
     }
 
-    double latitude = currentPosition!.latitude;
-    double longitude = currentPosition!.longitude;
+    double latitude = currentPosition?.latitude ?? currentLatLng?.latitude ?? 0.0;
+    double longitude = currentPosition?.longitude ?? currentLatLng?.longitude ?? 0.0;
 
     Map<String, dynamic> dataMap = {
       'PortfolioId': portfolioId,
