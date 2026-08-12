@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -200,6 +201,122 @@ class _CreateTourVoucherScreenState extends State<CreateTourVoucherScreen> {
       }
     } catch (e) {
       print('Error picking file: $e');
+    }
+  }
+
+  Future<void> _pickImageFromCamera() async {
+    if (!_isFormUnlocked) return;
+    if (_controller.newPJCId.value.isEmpty && !widget.isEditMode) return;
+
+    try {
+      final ImagePicker picker = ImagePicker();
+      final XFile? photo = await picker.pickImage(
+        source: ImageSource.camera,
+        imageQuality: 70,
+        preferredCameraDevice: CameraDevice.rear,
+      );
+
+      if (photo != null) {
+        final file = File(photo.path);
+        setState(() {
+          selectedFile = file;
+        });
+        await _uploadFile(file);
+      }
+    } catch (e) {
+      print('Error taking photo: $e');
+    }
+  }
+
+  void _showAttachmentOptions() {
+    Get.bottomSheet(
+      enableDrag: true,
+      SafeArea(
+        maintainBottomViewPadding: true,
+        child: Container(
+          color: Colors.white,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Select Attachment Source',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black87,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildSourceOption(
+                    icon: Icons.camera_alt,
+                    label: 'Camera',
+                    onTap: () {
+                      Get.back();
+                      _pickImageFromCamera();
+                    },
+                  ),
+                  _buildSourceOption(
+                    icon: Icons.folder,
+                    label: 'Files / Gallery',
+                    onTap: () {
+                      Get.back();
+                      pickFile();
+                    },
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+    );
+  }
+
+  Widget _buildSourceOption({
+    required IconData icon,
+    required String label,
+    required VoidCallback onTap,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        width: 120,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey.shade300),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 36, color: FlavorConfig.instance.primaryColor),
+            const SizedBox(height: 8),
+            Text(
+              label,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 14,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _onAttachTapped() {
+    if (FlavorConfig.instance.isSingla) {
+      _showAttachmentOptions();
+    } else {
+      pickFile();
     }
   }
 
@@ -570,7 +687,7 @@ class _CreateTourVoucherScreenState extends State<CreateTourVoucherScreen> {
     return Column(
       children: [
         GestureDetector(
-          onTap: _isFormUnlocked ? pickFile : null,
+          onTap: _isFormUnlocked ? _onAttachTapped : null,
           child: Container(
             width: double.infinity,
             margin: const EdgeInsets.only(top: 10),

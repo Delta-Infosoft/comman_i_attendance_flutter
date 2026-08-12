@@ -22,6 +22,10 @@ MERGED from [:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Proj
 MERGED from [:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
 MERGED from [:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:23:5-34:19
 MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:36:5-42:19
@@ -92,14 +96,14 @@ MERGED from [androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/tran
 MERGED from [androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:28:5-89
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:23:5-29:19
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:23:5-29:19
-MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
-MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:27:5-35:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/964ae8bff14e8dbdb68854346a504f12/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/964ae8bff14e8dbdb68854346a504f12/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:25:5-39:19
@@ -121,6 +125,7 @@ INJECTED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_at
 MERGED from [:android_alarm_manager_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/android_alarm_manager_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:android_intent_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/android_intent_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:battery_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/battery_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:connectivity_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:device_info_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/device_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-19:12
@@ -148,6 +153,10 @@ MERGED from [:webview_flutter_android] /Volumes/Mac Mini Secoundry Drive/Flutter
 MERGED from [:workmanager] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/workmanager/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/7c7428c0874c89f6a87077c7c1b520a0/transformed/jetified-appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c69319bedf36f544419d258bec6840db/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2c84aa0cfa263d3f56c9a6d5652d6609/transformed/jetified-camera-video-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/f952c71439bc66339903f4c4fc172291/transformed/jetified-camera-lifecycle-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:17:1-38:12
 MERGED from [androidx.media:media:1.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/f96b38876267277ebb1794d84f8fd661/transformed/media-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:17:1-44:12
@@ -215,16 +224,17 @@ MERGED from [androidx.customview:customview:1.0.0] /Users/deltainfosoft/.gradle/
 MERGED from [androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.core:core-ktx:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9406bfa6feabb65ca530a489331788d7/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/527b6e2a78d8ac3c53bf1df820fdca57/transformed/jetified-annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/fe7a57a67eb6cfd9c12d6450da1a4faf/transformed/jetified-tracing-ktx-1.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-config-interop:16.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/74d4c15bb1d2c736900208f80a27a1d6/transformed/jetified-firebase-config-interop-16.0.1/AndroidManifest.xml:15:1-20:12
 MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:15:1-33:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/5f79738add8ab71610ba42ac5052ad72/transformed/jetified-firebase-encoders-json-18.0.1/AndroidManifest.xml:15:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/deltainfosoft/.gradle/caches/transforms-3/26d655f3b416227e91eb150229bac5b2/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/e44beb79fe42a60f4f38eb35820a17e5/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/deltainfosoft/.gradle/caches/transforms-3/3238bcb29205eea7e7c1c2df60585b8a/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/deltainfosoft/.gradle/caches/transforms-3/b9d6ceadfcd4e9a02b011f61d2f46925/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c57365f2e03e08e1d48c0aa984b2b08b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/964ae8bff14e8dbdb68854346a504f12/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
@@ -293,6 +303,8 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /User
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:9:22-64
 uses-permission#android.permission.CAMERA
 ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:10:5-64
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
 	android:name
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:10:22-62
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -345,6 +357,8 @@ MERGED from [:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects Ne
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:15:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:16:5-17:37
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-13:38
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-13:38
 	android:maxSdkVersion
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:17:9-35
 	android:name
@@ -359,6 +373,8 @@ MERGED from [androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/cach
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:22:22-74
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:24:5-70
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
 	android:name
 		ADDED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:24:22-68
 uses-permission#android.permission.ACCESS_FINE_LOCATION
@@ -459,6 +475,8 @@ MERGED from [:android_intent_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Pro
 MERGED from [:android_intent_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/android_intent_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:battery_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/battery_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:battery_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/battery_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:connectivity_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:connectivity_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:device_info_plus] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/device_info_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -513,6 +531,14 @@ MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/deltainfosoft/
 MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/7c7428c0874c89f6a87077c7c1b520a0/transformed/jetified-appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c69319bedf36f544419d258bec6840db/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c69319bedf36f544419d258bec6840db/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2c84aa0cfa263d3f56c9a6d5652d6609/transformed/jetified-camera-video-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-video:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2c84aa0cfa263d3f56c9a6d5652d6609/transformed/jetified-camera-video-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/f952c71439bc66339903f4c4fc172291/transformed/jetified-camera-lifecycle-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/f952c71439bc66339903f4c4fc172291/transformed/jetified-camera-lifecycle-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/f96b38876267277ebb1794d84f8fd661/transformed/media-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -647,6 +673,16 @@ MERGED from [androidx.core:core-ktx:1.13.1] /Users/deltainfosoft/.gradle/caches/
 MERGED from [androidx.core:core-ktx:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9406bfa6feabb65ca530a489331788d7/transformed/jetified-core-ktx-1.13.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:21:5-44
 MERGED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/527b6e2a78d8ac3c53bf1df820fdca57/transformed/jetified-annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/527b6e2a78d8ac3c53bf1df820fdca57/transformed/jetified-annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/fe7a57a67eb6cfd9c12d6450da1a4faf/transformed/jetified-tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing-ktx:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/fe7a57a67eb6cfd9c12d6450da1a4faf/transformed/jetified-tracing-ktx-1.2.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-config-interop:16.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/74d4c15bb1d2c736900208f80a27a1d6/transformed/jetified-firebase-config-interop-16.0.1/AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-config-interop:16.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/74d4c15bb1d2c736900208f80a27a1d6/transformed/jetified-firebase-config-interop-16.0.1/AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:18:5-20:41
@@ -655,18 +691,10 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /User
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/5f79738add8ab71610ba42ac5052ad72/transformed/jetified-firebase-encoders-json-18.0.1/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.1] /Users/deltainfosoft/.gradle/caches/transforms-3/5f79738add8ab71610ba42ac5052ad72/transformed/jetified-firebase-encoders-json-18.0.1/AndroidManifest.xml:18:5-20:41
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/deltainfosoft/.gradle/caches/transforms-3/26d655f3b416227e91eb150229bac5b2/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/deltainfosoft/.gradle/caches/transforms-3/26d655f3b416227e91eb150229bac5b2/transformed/jetified-annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/e44beb79fe42a60f4f38eb35820a17e5/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/e44beb79fe42a60f4f38eb35820a17e5/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/deltainfosoft/.gradle/caches/transforms-3/3238bcb29205eea7e7c1c2df60585b8a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/deltainfosoft/.gradle/caches/transforms-3/3238bcb29205eea7e7c1c2df60585b8a/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2df3aaae5db6329ca8619257275f953e/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/4201660d85f1144aa4bc1347aedf4651/transformed/jetified-tracing-1.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/deltainfosoft/.gradle/caches/transforms-3/b9d6ceadfcd4e9a02b011f61d2f46925/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/deltainfosoft/.gradle/caches/transforms-3/b9d6ceadfcd4e9a02b011f61d2f46925/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c57365f2e03e08e1d48c0aa984b2b08b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
@@ -699,6 +727,10 @@ MERGED from [com.google.maps.android:android-maps-utils:3.6.0] /Users/deltainfos
 		INJECTED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/debug/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/debug/AndroidManifest.xml
+uses-feature#android.hardware.camera.any
+ADDED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-64
+	android:name
+		ADDED from [:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:7:19-61
 intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
 ADDED from [:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
 action#android.intent.action.GET_CONTENT
@@ -928,6 +960,26 @@ ADDED from [:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Pro
 		ADDED from [:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
 	android:name
 		ADDED from [:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/6e141955336dad5d43a89f6f6179d145/transformed/jetified-camera-core-1.4.1/AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:31:17-103
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
 MERGED from [com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:26:5-82
@@ -1486,26 +1538,6 @@ ADDED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/cache
 		ADDED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:26:13-43
 	android:name
 		ADDED from [androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:25:13-74
-meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
-ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
-	android:value
-		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
-service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
-ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
-MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
-	android:exported
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
-meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
-ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
-	android:value
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
-	android:name
-		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
 	android:value
@@ -1548,6 +1580,26 @@ action#androidx.profileinstaller.action.BENCHMARK_OPERATION
 ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
 	android:name
 		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
 service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
 ADDED from [com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
 	android:exported

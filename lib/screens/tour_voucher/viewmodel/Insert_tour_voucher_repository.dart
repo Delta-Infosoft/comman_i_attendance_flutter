@@ -356,7 +356,7 @@ class TourVoucherRepository {
     } catch (e) {
       print('❌ GetUploadedDocList Error: $e');
       return UploadedDocListResponse(
-        status: '500',
+        status: '209',
         message: e.toString(),
         result: [],
       );

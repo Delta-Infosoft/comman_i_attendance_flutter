@@ -1,0 +1,1050 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.i.singla.iattendanceapp"
+4    android:versionCode="6"
+5    android:versionName="1.0.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="36" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:9:5-66
+15-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:9:22-64
+16
+17    <uses-feature
+17-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:5:1-7:36
+18        android:name="android.hardware.camera"
+18-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:6:9-47
+19        android:required="false" />
+19-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:7:9-33
+20
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:10:5-64
+21-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:10:22-62
+22    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+22-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:11:5-78
+22-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:11:22-76
+23    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+24    <uses-permission
+24-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:15:5-79
+25        android:name="android.permission.READ_EXTERNAL_STORAGE"
+25-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:15:22-77
+26        android:maxSdkVersion="32" />
+26-->[:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-35
+27    <uses-permission
+27-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:16:5-17:37
+28        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+28-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:16:22-78
+29        android:maxSdkVersion="28" /> <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> -->
+29-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:17:9-35
+30    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+31    <!-- <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/> -->
+32    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+32-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:22:5-76
+32-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:22:22-74
+33    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+33-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:24:5-70
+33-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:24:22-68
+34    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+34-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:27:5-78
+34-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:27:22-76
+35    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+35-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:28:5-80
+35-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:28:22-78
+36    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+36-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:30:5-85
+36-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:30:22-82
+37    <uses-permission android:name="android.permission.WAKE_LOCK" />
+37-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:32:5-68
+37-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:32:22-65
+38    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" /> <!-- <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> -->
+38-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:33:5-86
+38-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:33:22-83
+39    <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" /> -->
+40    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+40-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:36:5-77
+40-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:36:22-74
+41    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" /> <!-- <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" tools:ignore="NewApi" /> -->
+41-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:37:5-95
+41-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:37:22-92
+42    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+42-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:41:5-80
+42-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:41:22-78
+43    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+43-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:42:5-43:46
+43-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:42:22-76
+44    <!--
+45 Required to query activities that can process text, see:
+46         https://developer.android.com/training/package-visibility and
+47         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+48
+49         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+50    -->
+51    <queries>
+51-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:139:5-144:15
+52        <intent>
+52-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:140:9-143:18
+53            <action android:name="android.intent.action.PROCESS_TEXT" />
+53-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:141:13-72
+53-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:141:21-70
+54
+55            <data android:mimeType="text/plain" />
+55-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:13-50
+55-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:19-48
+56        </intent>
+57        <intent>
+57-->[:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:18
+58            <action android:name="android.intent.action.GET_CONTENT" />
+58-->[:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-72
+58-->[:file_picker] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/file_picker/intermediates/merged_manifest/debug/AndroidManifest.xml:13:21-69
+59
+60            <data android:mimeType="*/*" />
+60-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:13-50
+60-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:19-48
+61        </intent> <!-- Needs to be explicitly declared on Android R+ -->
+62        <package android:name="com.google.android.apps.maps" />
+62-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+62-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+63    </queries>
+64
+65    <uses-feature android:name="android.hardware.camera.any" />
+65-->[:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-64
+65-->[:camera_android_camerax] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/camera_android_camerax/intermediates/merged_manifest/debug/AndroidManifest.xml:7:19-61
+66
+67    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+67-->[:flutter_local_notifications] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-66
+67-->[:flutter_local_notifications] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-63
+68    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+68-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
+68-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:22-79
+69
+70    <uses-feature
+70-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+71        android:glEsVersion="0x00020000"
+71-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+72        android:required="true" />
+72-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+73
+74    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+74-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:25:5-79
+74-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:25:22-76
+75    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+75-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:26:5-88
+75-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:26:22-85
+76    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+76-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:27:5-82
+76-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:27:22-79
+77    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+77-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/deltainfosoft/.gradle/caches/transforms-3/68f40713d0bdac73d059a041903ea6b3/transformed/jetified-recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+77-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/deltainfosoft/.gradle/caches/transforms-3/68f40713d0bdac73d059a041903ea6b3/transformed/jetified-recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+78    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+78-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:26:5-110
+78-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:26:22-107
+79
+80    <permission
+80-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+81        android:name="com.i.singla.iattendanceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+81-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+82        android:protectionLevel="signature" />
+82-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+83
+84    <uses-permission android:name="com.i.singla.iattendanceapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+84-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+84-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+85
+86    <application
+87        android:name="android.app.Application"
+88        android:allowBackup="false"
+89        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+89-->[androidx.core:core:1.13.1] /Users/deltainfosoft/.gradle/caches/transforms-3/769861d2129a929f544e9550a530bbb4/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+90        android:debuggable="true"
+91        android:extractNativeLibs="true"
+92        android:fullBackupContent="false"
+93        android:icon="@mipmap/ic_launcher"
+94        android:label="@string/app_name"
+95        android:requestLegacyExternalStorage="true"
+96        android:usesCleartextTraffic="true" >
+97        <activity
+98            android:name="com.waterman_iattandance.MainActivity"
+99            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+100            android:exported="true"
+101            android:hardwareAccelerated="true"
+102            android:launchMode="singleTop"
+103            android:taskAffinity=""
+104            android:theme="@style/LaunchTheme"
+105            android:windowSoftInputMode="adjustResize" >
+106
+107            <!--
+108                 Specifies an Android theme to apply to this Activity as soon as
+109                 the Android process has started. This theme is visible to the user
+110                 while the Flutter UI initializes. After that, this theme continues
+111                 to determine the Window background behind the Flutter UI.
+112            -->
+113            <meta-data
+114                android:name="io.flutter.embedding.android.NormalTheme"
+115                android:resource="@style/NormalTheme" />
+116
+117            <intent-filter>
+118                <action android:name="android.intent.action.MAIN" />
+119
+120                <category android:name="android.intent.category.LAUNCHER" />
+121            </intent-filter>
+122        </activity>
+123        <!--
+124             Don't delete the meta-data below.
+125             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+126        -->
+127        <meta-data
+128            android:name="flutterEmbedding"
+129            android:value="2" />
+130        <meta-data
+131            android:name="com.google.android.geo.API_KEY"
+132            android:value="AIzaSyDCWLNgrF5otFl4xytzAEj5UavcbtU1YNs" />
+133
+134        <receiver
+135            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+136            android:enabled="true"
+137            android:exported="false" > <!-- Add this line -->
+138            <intent-filter>
+139                <action android:name="android.intent.action.BOOT_COMPLETED" />
+139-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-79
+139-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-76
+140                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+140-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-84
+140-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-81
+141            </intent-filter>
+142        </receiver>
+143
+144        <!-- <service -->
+145        <!-- android:name="id.flutter.flutter_background_service.BackgroundService" -->
+146        <!-- android:exported="false" -->
+147        <!-- android:permission="android.permission.FOREGROUND_SERVICE" -->
+148        <!-- android:foregroundServiceType="location" -->
+149        <!-- tools:replace="android:exported,android:foregroundServiceType" /> -->
+150
+151        <service
+152            android:name="id.flutter.flutter_background_service.BackgroundService"
+153            android:enabled="true"
+153-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-35
+154            android:exported="false"
+155            android:foregroundServiceType="location"
+156            android:stopWithTask="false" />
+157
+158        <!-- AlarmManager service -->
+159        <service
+160            android:name="dev.fluttercommunity.plus.androidalarmmanager.AlarmService"
+161            android:exported="false"
+162            android:permission="android.permission.BIND_JOB_SERVICE" />
+163
+164        <receiver
+165            android:name="dev.fluttercommunity.plus.androidalarmmanager.AlarmBroadcastReceiver"
+166            android:exported="false" />
+167        <receiver
+168            android:name="dev.fluttercommunity.plus.androidalarmmanager.RebootBroadcastReceiver"
+169            android:enabled="false"
+170            android:exported="false" >
+171            <intent-filter>
+172                <action android:name="android.intent.action.BOOT_COMPLETED" />
+172-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-79
+172-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-76
+173            </intent-filter>
+174        </receiver>
+175
+176        <service
+176-->[:firebase_analytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:12:9-16:19
+177            android:name="com.google.firebase.components.ComponentDiscoveryService"
+177-->[:firebase_analytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:12:18-89
+178            android:directBootAware="true"
+178-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:32:13-43
+179            android:exported="false" >
+179-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:31:13-37
+180            <meta-data
+180-->[:firebase_analytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-15:85
+181                android:name="com.google.firebase.components:io.flutter.plugins.firebase.analytics.FlutterFirebaseAppRegistrar"
+181-->[:firebase_analytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:14:17-128
+182                android:value="com.google.firebase.components.ComponentRegistrar" />
+182-->[:firebase_analytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_analytics/intermediates/merged_manifest/debug/AndroidManifest.xml:15:17-82
+183            <meta-data
+183-->[:firebase_auth] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+184                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+184-->[:firebase_auth] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+185                android:value="com.google.firebase.components.ComponentRegistrar" />
+185-->[:firebase_auth] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+186            <meta-data
+186-->[:firebase_crashlytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+187                android:name="com.google.firebase.components:io.flutter.plugins.firebase.crashlytics.FlutterFirebaseAppRegistrar"
+187-->[:firebase_crashlytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-130
+188                android:value="com.google.firebase.components.ComponentRegistrar" />
+188-->[:firebase_crashlytics] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_crashlytics/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+189            <meta-data
+189-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-38:85
+190                android:name="com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar"
+190-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:17-128
+191                android:value="com.google.firebase.components.ComponentRegistrar" />
+191-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:17-82
+192            <meta-data
+192-->[:firebase_remote_config] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_remote_config/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+193                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firebaseremoteconfig.FlutterFirebaseAppRegistrar"
+193-->[:firebase_remote_config] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_remote_config/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-139
+194                android:value="com.google.firebase.components.ComponentRegistrar" />
+194-->[:firebase_remote_config] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_remote_config/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+195            <meta-data
+195-->[:firebase_core] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-11:85
+196                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+196-->[:firebase_core] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:17-124
+197                android:value="com.google.firebase.components.ComponentRegistrar" />
+197-->[:firebase_core] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:17-82
+198            <meta-data
+198-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+199                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+199-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+200                android:value="com.google.firebase.components.ComponentRegistrar" />
+200-->[com.google.firebase:firebase-iid:21.1.0] /Users/deltainfosoft/.gradle/caches/transforms-3/99f0479995d86e22271952bd6a40fe6a/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+201            <meta-data
+201-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
+202                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+202-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
+203                android:value="com.google.firebase.components.ComponentRegistrar" />
+203-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
+204            <meta-data
+204-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:57:13-59:85
+205                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+205-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:58:17-122
+206                android:value="com.google.firebase.components.ComponentRegistrar" />
+206-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:59:17-82
+207            <meta-data
+207-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:60:13-62:85
+208                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+208-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:61:17-119
+209                android:value="com.google.firebase.components.ComponentRegistrar" />
+209-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:62:17-82
+210            <meta-data
+210-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:29:13-31:85
+211                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+211-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:30:17-128
+212                android:value="com.google.firebase.components.ComponentRegistrar" />
+212-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:31:17-82
+213            <meta-data
+213-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:32:13-34:85
+214                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+214-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:33:17-117
+215                android:value="com.google.firebase.components.ComponentRegistrar" />
+215-->[com.google.firebase:firebase-config:21.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/b6e83426e90cd2c9d3ea2e71644a8f1d/transformed/jetified-firebase-config-21.6.3/AndroidManifest.xml:34:17-82
+216            <meta-data
+216-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:15:13-17:85
+217                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+217-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:16:17-126
+218                android:value="com.google.firebase.components.ComponentRegistrar" />
+218-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:17:17-82
+219            <meta-data
+219-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:18:13-20:85
+220                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+220-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:19:17-115
+221                android:value="com.google.firebase.components.ComponentRegistrar" />
+221-->[com.google.firebase:firebase-crashlytics:18.6.3] /Users/deltainfosoft/.gradle/caches/transforms-3/710c8d3bc9be737ab8736d28e7229028/transformed/jetified-firebase-crashlytics-18.6.3/AndroidManifest.xml:20:17-82
+222            <meta-data
+222-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:37:13-39:85
+223                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+223-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:38:17-139
+224                android:value="com.google.firebase.components.ComponentRegistrar" />
+224-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:39:17-82
+225            <meta-data
+225-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:29:13-31:85
+226                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+226-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:30:17-117
+227                android:value="com.google.firebase.components.ComponentRegistrar" />
+227-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:31:17-82
+228            <meta-data
+228-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+229                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+229-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+230                android:value="com.google.firebase.components.ComponentRegistrar" />
+230-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+231            <meta-data
+231-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+232                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+232-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+233                android:value="com.google.firebase.components.ComponentRegistrar" />
+233-->[com.google.firebase:firebase-installations:17.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2b09857d24c43ade1e85441196cc301f/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+234            <meta-data
+234-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/6b8c74ecedd3227c8d9380c60514b87a/transformed/jetified-firebase-common-ktx-20.4.3/AndroidManifest.xml:12:13-14:85
+235                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+235-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/6b8c74ecedd3227c8d9380c60514b87a/transformed/jetified-firebase-common-ktx-20.4.3/AndroidManifest.xml:13:17-116
+236                android:value="com.google.firebase.components.ComponentRegistrar" />
+236-->[com.google.firebase:firebase-common-ktx:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/6b8c74ecedd3227c8d9380c60514b87a/transformed/jetified-firebase-common-ktx-20.4.3/AndroidManifest.xml:14:17-82
+237            <meta-data
+237-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:35:13-37:85
+238                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+238-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:36:17-109
+239                android:value="com.google.firebase.components.ComponentRegistrar" />
+239-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:37:17-82
+240            <meta-data
+240-->[com.google.firebase:firebase-abt:21.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/570236cab6524c5b7bd965145603ac61/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:12:13-14:85
+241                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+241-->[com.google.firebase:firebase-abt:21.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/570236cab6524c5b7bd965145603ac61/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:13:17-109
+242                android:value="com.google.firebase.components.ComponentRegistrar" />
+242-->[com.google.firebase:firebase-abt:21.1.1] /Users/deltainfosoft/.gradle/caches/transforms-3/570236cab6524c5b7bd965145603ac61/transformed/jetified-firebase-abt-21.1.1/AndroidManifest.xml:14:17-82
+243            <meta-data
+243-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
+244                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+244-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
+245                android:value="com.google.firebase.components.ComponentRegistrar" />
+245-->[com.google.firebase:firebase-datatransport:18.1.8] /Users/deltainfosoft/.gradle/caches/transforms-3/5b0e42f36b133119fb5c93ce87fe57cc/transformed/jetified-firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
+246        </service>
+247        <service
+247-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-17:72
+248            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService"
+248-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-107
+249            android:exported="false"
+249-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-37
+250            android:permission="android.permission.BIND_JOB_SERVICE" />
+250-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-69
+251        <service
+251-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-24:19
+252            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService"
+252-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-97
+253            android:exported="false" >
+253-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-37
+254            <intent-filter>
+254-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
+255                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+255-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
+255-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
+256            </intent-filter>
+257        </service>
+258
+259        <receiver
+259-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-33:20
+260            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver"
+260-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-98
+261            android:exported="true"
+261-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-36
+262            android:permission="com.google.android.c2dm.permission.SEND" >
+262-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-73
+263            <intent-filter>
+263-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
+264                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+264-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
+264-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
+265            </intent-filter>
+266        </receiver>
+267
+268        <provider
+268-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:41:9-45:38
+269            android:name="io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider"
+269-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-102
+270            android:authorities="com.i.singla.iattendanceapp.flutterfirebasemessaginginitprovider"
+270-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:13-88
+271            android:exported="false"
+271-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-37
+272            android:initOrder="99" />
+272-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-35
+273
+274        <receiver
+274-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-21:39
+275            android:name="id.flutter.flutter_background_service.WatchdogReceiver"
+275-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-82
+276            android:enabled="true"
+276-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-35
+277            android:exported="true" />
+277-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-36
+278        <receiver
+278-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:22:9-31:20
+279            android:name="id.flutter.flutter_background_service.BootReceiver"
+279-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-78
+280            android:enabled="true"
+280-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-35
+281            android:exported="true" >
+281-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-36
+282            <intent-filter>
+282-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-30:29
+283                <action android:name="android.intent.action.BOOT_COMPLETED" />
+283-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-79
+283-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-76
+284                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+284-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-82
+284-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-79
+285                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+285-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-84
+285-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-81
+286            </intent-filter>
+287        </receiver>
+288
+289        <provider
+289-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:9-17:20
+290            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+290-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-82
+291            android:authorities="com.i.singla.iattendanceapp.flutter.image_provider"
+291-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+292            android:exported="false"
+292-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+293            android:grantUriPermissions="true" >
+293-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-47
+294            <meta-data
+294-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-16:75
+295                android:name="android.support.FILE_PROVIDER_PATHS"
+295-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:17-67
+296                android:resource="@xml/flutter_image_picker_file_paths" />
+296-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-72
+297        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+298        <service
+298-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-31:19
+299            android:name="com.google.android.gms.metadata.ModuleDependencies"
+299-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-78
+300            android:enabled="false"
+300-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-36
+301            android:exported="false" >
+301-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
+302            <intent-filter>
+302-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-26:29
+303                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+303-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-94
+303-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:25:25-91
+304            </intent-filter>
+305
+306            <meta-data
+306-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-30:36
+307                android:name="photopicker_activity:0:required"
+307-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-63
+308                android:value="" />
+308-->[:image_picker_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:30:17-33
+309        </service>
+310        <service
+310-->[:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:56
+311            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+311-->[:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-77
+312            android:enabled="true"
+312-->[:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-35
+313            android:exported="false"
+313-->[:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-37
+314            android:foregroundServiceType="location" />
+314-->[:geolocator_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-53
+315
+316        <activity
+316-->[:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
+317            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+317-->[:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74
+318            android:exported="false"
+318-->[:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-37
+319            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+319-->[:url_launcher_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
+320
+321        <service
+321-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:24:9-33:19
+322            android:name="androidx.camera.core.impl.MetadataHolderService"
+322-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:25:13-75
+323            android:enabled="false"
+323-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:26:13-36
+324            android:exported="false" >
+324-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:27:13-37
+325            <meta-data
+325-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:30:13-32:89
+326                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+326-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:31:17-103
+327                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+327-->[androidx.camera:camera-camera2:1.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/d161ca73799bd4f4b5af88fdff9fc43c/transformed/jetified-camera-camera2-1.4.1/AndroidManifest.xml:32:17-86
+328        </service> <!-- Needs to be explicitly declared on P+ -->
+329        <uses-library
+329-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+330            android:name="org.apache.http.legacy"
+330-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+331            android:required="false" />
+331-->[com.google.android.gms:play-services-maps:18.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/66811067d6f2114b5c5ee9781dbdc8b8/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+332
+333        <activity
+333-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
+334            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+334-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
+335            android:excludeFromRecents="true"
+335-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
+336            android:exported="true"
+336-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
+337            android:launchMode="singleTask"
+337-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
+338            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+338-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
+339            <intent-filter>
+339-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
+340                <action android:name="android.intent.action.VIEW" />
+340-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+340-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+341
+342                <category android:name="android.intent.category.DEFAULT" />
+342-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+342-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+343                <category android:name="android.intent.category.BROWSABLE" />
+343-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+343-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+344
+345                <data
+345-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:13-50
+346                    android:host="firebase.auth"
+347                    android:path="/"
+348                    android:scheme="genericidp" />
+349            </intent-filter>
+350        </activity>
+351        <activity
+351-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
+352            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+352-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
+353            android:excludeFromRecents="true"
+353-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
+354            android:exported="true"
+354-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
+355            android:launchMode="singleTask"
+355-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
+356            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+356-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
+357            <intent-filter>
+357-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
+358                <action android:name="android.intent.action.VIEW" />
+358-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+358-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+359
+360                <category android:name="android.intent.category.DEFAULT" />
+360-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+360-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+361                <category android:name="android.intent.category.BROWSABLE" />
+361-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+361-->[com.google.firebase:firebase-auth:22.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/2a278f1f1ff3f7a306aac1e7f59d8e92/transformed/jetified-firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+362
+363                <data
+363-->/Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/android/app/src/main/AndroidManifest.xml:142:13-50
+364                    android:host="firebase.auth"
+365                    android:path="/"
+366                    android:scheme="recaptcha" />
+367            </intent-filter>
+368        </activity>
+369
+370        <receiver
+370-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:29:9-40:20
+371            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+371-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:30:13-78
+372            android:exported="true"
+372-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:31:13-36
+373            android:permission="com.google.android.c2dm.permission.SEND" >
+373-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:32:13-73
+374            <intent-filter>
+374-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-32:29
+375                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+375-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:17-81
+375-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:25-78
+376            </intent-filter>
+377
+378            <meta-data
+378-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:37:13-39:40
+379                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+379-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:38:17-92
+380                android:value="true" />
+380-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:39:17-37
+381        </receiver>
+382        <!--
+383             FirebaseMessagingService performs security checks at runtime,
+384             but set to not exported to explicitly avoid allowing another app to call it.
+385        -->
+386        <service
+386-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:46:9-53:19
+387            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+387-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:47:13-82
+388            android:directBootAware="true"
+388-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:48:13-43
+389            android:exported="false" >
+389-->[com.google.firebase:firebase-messaging:23.4.1] /Users/deltainfosoft/.gradle/caches/transforms-3/60d0eb7b7bf35804ee04790f16874396/transformed/jetified-firebase-messaging-23.4.1/AndroidManifest.xml:49:13-37
+390            <intent-filter android:priority="-500" >
+390-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-23:29
+391                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+391-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-78
+391-->[:firebase_messaging] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:25-75
+392            </intent-filter>
+393        </service>
+394
+395        <property
+395-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:30:9-32:61
+396            android:name="android.adservices.AD_SERVICES_CONFIG"
+396-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:31:13-65
+397            android:resource="@xml/ga_ad_services_config" />
+397-->[com.google.android.gms:play-services-measurement-api:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/9fdbe3218356515a92359ff8e6d2163f/transformed/jetified-play-services-measurement-api-21.6.1/AndroidManifest.xml:32:13-58
+398
+399        <service
+399-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:22:9-25:40
+400            android:name="com.google.firebase.sessions.SessionLifecycleService"
+400-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:23:13-80
+401            android:enabled="true"
+401-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:24:13-35
+402            android:exported="false" />
+402-->[com.google.firebase:firebase-sessions:1.2.3] /Users/deltainfosoft/.gradle/caches/transforms-3/c649d5d967507a17c764ae99e062f672/transformed/jetified-firebase-sessions-1.2.3/AndroidManifest.xml:25:13-37
+403
+404        <provider
+404-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:23:9-28:39
+405            android:name="com.google.firebase.provider.FirebaseInitProvider"
+405-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:24:13-77
+406            android:authorities="com.i.singla.iattendanceapp.firebaseinitprovider"
+406-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:25:13-72
+407            android:directBootAware="true"
+407-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:26:13-43
+408            android:exported="false"
+408-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:27:13-37
+409            android:initOrder="100" />
+409-->[com.google.firebase:firebase-common:20.4.3] /Users/deltainfosoft/.gradle/caches/transforms-3/301b8194cb391b4c7d9583f9dded21db/transformed/jetified-firebase-common-20.4.3/AndroidManifest.xml:28:13-36
+410
+411        <activity
+411-->[com.google.android.gms:play-services-base:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/44b0522ad1492ed6be922e7196baeccd/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:9-22:45
+412            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+412-->[com.google.android.gms:play-services-base:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/44b0522ad1492ed6be922e7196baeccd/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:20:19-85
+413            android:exported="false"
+413-->[com.google.android.gms:play-services-base:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/44b0522ad1492ed6be922e7196baeccd/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:22:19-43
+414            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+414-->[com.google.android.gms:play-services-base:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/44b0522ad1492ed6be922e7196baeccd/transformed/jetified-play-services-base-18.3.0/AndroidManifest.xml:21:19-78
+415
+416        <provider
+416-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:29:9-37:20
+417            android:name="androidx.startup.InitializationProvider"
+417-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:30:13-67
+418            android:authorities="com.i.singla.iattendanceapp.androidx-startup"
+418-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:31:13-68
+419            android:exported="false" >
+419-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:32:13-37
+420            <meta-data
+420-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:34:13-36:52
+421                android:name="androidx.work.WorkManagerInitializer"
+421-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:35:17-68
+422                android:value="androidx.startup" />
+422-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:36:17-49
+423            <meta-data
+423-->[androidx.emoji2:emoji2:1.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/6e1b85b27d9206d22a464d783724a438/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+424                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+424-->[androidx.emoji2:emoji2:1.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/6e1b85b27d9206d22a464d783724a438/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+425                android:value="androidx.startup" />
+425-->[androidx.emoji2:emoji2:1.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/6e1b85b27d9206d22a464d783724a438/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+426            <meta-data
+426-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/5848bd500587024949214eef4734f440/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+427                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+427-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/5848bd500587024949214eef4734f440/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+428                android:value="androidx.startup" />
+428-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/deltainfosoft/.gradle/caches/transforms-3/5848bd500587024949214eef4734f440/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+429            <meta-data
+429-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+430                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+430-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+431                android:value="androidx.startup" />
+431-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+432        </provider>
+433
+434        <service
+434-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+435            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+435-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+436            android:directBootAware="false"
+436-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+437            android:enabled="@bool/enable_system_alarm_service_default"
+437-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+438            android:exported="false" />
+438-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+439        <service
+439-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+440            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+440-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+441            android:directBootAware="false"
+441-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+442            android:enabled="@bool/enable_system_job_service_default"
+442-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+443            android:exported="true"
+443-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+444            android:permission="android.permission.BIND_JOB_SERVICE" />
+444-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+445        <service
+445-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+446            android:name="androidx.work.impl.foreground.SystemForegroundService"
+446-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+447            android:directBootAware="false"
+447-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+448            android:enabled="@bool/enable_system_foreground_service_default"
+448-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+449            android:exported="false" />
+449-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+450
+451        <receiver
+451-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+452            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+452-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+453            android:directBootAware="false"
+453-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+454            android:enabled="true"
+454-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+455            android:exported="false" />
+455-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+456        <receiver
+456-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+457            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+457-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+458            android:directBootAware="false"
+458-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+459            android:enabled="false"
+459-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+460            android:exported="false" >
+460-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+461            <intent-filter>
+461-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+462                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+462-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+462-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+463                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+463-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+463-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+464            </intent-filter>
+465        </receiver>
+466        <receiver
+466-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+467            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+467-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+468            android:directBootAware="false"
+468-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+469            android:enabled="false"
+469-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+470            android:exported="false" >
+470-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+471            <intent-filter>
+471-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+472                <action android:name="android.intent.action.BATTERY_OKAY" />
+472-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+472-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+473                <action android:name="android.intent.action.BATTERY_LOW" />
+473-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+473-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+474            </intent-filter>
+475        </receiver>
+476        <receiver
+476-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+477            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+477-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+478            android:directBootAware="false"
+478-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+479            android:enabled="false"
+479-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+480            android:exported="false" >
+480-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+481            <intent-filter>
+481-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+482                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+482-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+482-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+483                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+483-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+483-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+484            </intent-filter>
+485        </receiver>
+486        <receiver
+486-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+487            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+487-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+488            android:directBootAware="false"
+488-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+489            android:enabled="false"
+489-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+490            android:exported="false" >
+490-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+491            <intent-filter>
+491-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+492                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+492-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+492-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+493            </intent-filter>
+494        </receiver>
+495        <receiver
+495-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+496            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+496-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+497            android:directBootAware="false"
+497-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+498            android:enabled="false"
+498-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+499            android:exported="false" >
+499-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+500            <intent-filter>
+500-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+501                <action android:name="android.intent.action.BOOT_COMPLETED" />
+501-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-79
+501-->[:flutter_background_service_android] /Volumes/Mac Mini Secoundry Drive/Flutter Projects New/comman_i_attendance_flutter/build/flutter_background_service_android/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-76
+502                <action android:name="android.intent.action.TIME_SET" />
+502-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+502-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+503                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+503-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+503-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+504            </intent-filter>
+505        </receiver>
+506        <receiver
+506-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+507            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+507-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+508            android:directBootAware="false"
+508-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+509            android:enabled="@bool/enable_system_alarm_service_default"
+509-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+510            android:exported="false" >
+510-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+511            <intent-filter>
+511-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+512                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+512-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+512-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+513            </intent-filter>
+514        </receiver>
+515        <receiver
+515-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+516            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+516-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+517            android:directBootAware="false"
+517-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+518            android:enabled="true"
+518-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+519            android:exported="true"
+519-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+520            android:permission="android.permission.DUMP" >
+520-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+521            <intent-filter>
+521-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+522                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+522-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+522-->[androidx.work:work-runtime:2.9.0] /Users/deltainfosoft/.gradle/caches/transforms-3/751d3a80b8d5ce4fd717d3d434c9e6df/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+523            </intent-filter>
+524        </receiver>
+525        <receiver
+525-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:29:9-33:20
+526            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+526-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:30:13-85
+527            android:enabled="true"
+527-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:31:13-35
+528            android:exported="false" >
+528-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:32:13-37
+529        </receiver>
+530
+531        <service
+531-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:35:9-38:40
+532            android:name="com.google.android.gms.measurement.AppMeasurementService"
+532-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:36:13-84
+533            android:enabled="true"
+533-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:37:13-35
+534            android:exported="false" />
+534-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:38:13-37
+535        <service
+535-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:39:9-43:72
+536            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+536-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:40:13-87
+537            android:enabled="true"
+537-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:41:13-35
+538            android:exported="false"
+538-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:42:13-37
+539            android:permission="android.permission.BIND_JOB_SERVICE" />
+539-->[com.google.android.gms:play-services-measurement:21.6.1] /Users/deltainfosoft/.gradle/caches/transforms-3/3e86c3cb8010ac28c4b8cfbf760dc34f/transformed/jetified-play-services-measurement-21.6.1/AndroidManifest.xml:43:13-69
+540
+541        <uses-library
+541-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+542            android:name="androidx.window.extensions"
+542-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+543            android:required="false" />
+543-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+544        <uses-library
+544-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+545            android:name="androidx.window.sidecar"
+545-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+546            android:required="false" />
+546-->[androidx.window:window:1.2.0] /Users/deltainfosoft/.gradle/caches/transforms-3/2ef9c104a5e442ad511392f3b2c88565/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+547        <uses-library
+547-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/deltainfosoft/.gradle/caches/transforms-3/75fa678a9f183702ef6226140ebbcb4a/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+548            android:name="android.ext.adservices"
+548-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/deltainfosoft/.gradle/caches/transforms-3/75fa678a9f183702ef6226140ebbcb4a/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+549            android:required="false" />
+549-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /Users/deltainfosoft/.gradle/caches/transforms-3/75fa678a9f183702ef6226140ebbcb4a/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+550
+551        <meta-data
+551-->[com.google.android.gms:play-services-basement:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c3b4f4c13a5e54dd016b18142a23754c/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:21:9-23:69
+552            android:name="com.google.android.gms.version"
+552-->[com.google.android.gms:play-services-basement:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c3b4f4c13a5e54dd016b18142a23754c/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:22:13-58
+553            android:value="@integer/google_play_services_version" />
+553-->[com.google.android.gms:play-services-basement:18.3.0] /Users/deltainfosoft/.gradle/caches/transforms-3/c3b4f4c13a5e54dd016b18142a23754c/transformed/jetified-play-services-basement-18.3.0/AndroidManifest.xml:23:13-66
+554
+555        <service
+555-->[androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:24:9-28:63
+556            android:name="androidx.room.MultiInstanceInvalidationService"
+556-->[androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:25:13-74
+557            android:directBootAware="true"
+557-->[androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:26:13-43
+558            android:exported="false" />
+558-->[androidx.room:room-runtime:2.5.0] /Users/deltainfosoft/.gradle/caches/transforms-3/82183ed4c0392360856503e710dcde94/transformed/room-runtime-2.5.0/AndroidManifest.xml:27:13-37
+559
+560        <receiver
+560-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+561            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+561-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+562            android:directBootAware="false"
+562-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+563            android:enabled="true"
+563-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+564            android:exported="true"
+564-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+565            android:permission="android.permission.DUMP" >
+565-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+566            <intent-filter>
+566-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+567                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+567-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+567-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+568            </intent-filter>
+569            <intent-filter>
+569-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+570                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+570-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+570-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+571            </intent-filter>
+572            <intent-filter>
+572-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+573                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+573-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+573-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+574            </intent-filter>
+575            <intent-filter>
+575-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+576                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+576-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+576-->[androidx.profileinstaller:profileinstaller:1.3.1] /Users/deltainfosoft/.gradle/caches/transforms-3/82c382ea5b93d8114fefd6eb7513a234/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+577            </intent-filter>
+578        </receiver>
+579
+580        <service
+580-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+581            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+581-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+582            android:exported="false" >
+582-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+583            <meta-data
+583-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+584                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+584-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+585                android:value="cct" />
+585-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/79880b6cf683ad050c0f6c5a98759a47/transformed/jetified-transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+586        </service>
+587        <service
+587-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+588            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+588-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+589            android:exported="false"
+589-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+590            android:permission="android.permission.BIND_JOB_SERVICE" >
+590-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+591        </service>
+592
+593        <receiver
+593-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+594            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+594-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+595            android:exported="false" />
+595-->[com.google.android.datatransport:transport-runtime:3.1.9] /Users/deltainfosoft/.gradle/caches/transforms-3/8d3eb20533e42c45eaa35b004b79d473/transformed/jetified-transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+596    </application>
+597
+598</manifest>

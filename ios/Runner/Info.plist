@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   	<key>BGTaskSchedulerPermittedIdentifiers</key>
-   	<array>
-   		<string>waterman_service_watchdog</string>
-   	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>waterman_service_watchdog</string>
+	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -32,6 +32,8 @@
 	<true/>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<false/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -56,23 +58,23 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_dartVmService._tcp</string>
+		<string>_dartobservatory._tcp</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>This app requires access to the camera for capturing photos.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Waterman iAttendance uses the local network to discover and connect to attendance devices and services on your organization's network.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Waterman iAttendance requires access to your location in the background to verify your work location during active work sessions. For example, after you check in, the app may verify your location to ensure attendance authenticity as per company policy.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Waterman iAttendance collects location data in the background only during active work sessions to validate attendance records and prevent misuse. Location data is securely transmitted to your organization’s server for attendance management.</string>
-		<key>NSLocationWhenInUseUsageDescription</key>
-		<string>Waterman iAttendance uses your location while the app is in use to mark your attendance and display your check-in/check-out location on the map. For example, when you press the Check-In button, your current GPS location is captured and stored with your attendance record.</string>
-		<key>NSLocalNetworkUsageDescription</key>
-		<string>Waterman iAttendance uses the local network to discover and connect to attendance devices and services on your organization's network.</string>
-		<key>NSBonjourServices</key>
-		<array>
-			<string>_dartVmService._tcp</string>
-			<string>_dartobservatory._tcp</string>
-		</array>
-		<key>NSMicrophoneUsageDescription</key>
-		<string>This app requires access to the microphone for recording audio.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Waterman iAttendance uses your location while the app is in use to mark your attendance and display your check-in/check-out location on the map. For example, when you press the Check-In button, your current GPS location is captured and stored with your attendance record.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires access to the microphone for recording audio.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>This app requires permission to save photos to your library.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
@@ -108,9 +110,6 @@
 		<string>103.113.32.126</string>
 		<string>103.168.19.137</string>
 	</array>
-
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>io.flutter.embedded_views_preview</key>
 	<true/>
 </dict>

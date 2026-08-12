@@ -64,15 +64,15 @@ android {
             dimension "client"
             applicationId "com.waterman_iattandance"
             resValue "string", "app_name", "Waterman iAttendance V2"
-            versionCode 14
-            versionName "1.0.7"
+            versionCode 15
+            versionName "1.0.8"
         }
         singla {
             dimension "client"
             applicationId "com.i.singla.iattendanceapp"
             resValue "string", "app_name", "Singla iAttendance"
-            versionCode 5
-            versionName "1.0.4"
+            versionCode 6
+            versionName "1.0.5"
         }
     }
     // ──────────────────────────────────────────────────────────────────────────
