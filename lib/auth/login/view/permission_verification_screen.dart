@@ -940,7 +940,9 @@ class _PermissionVerificationScreenState
                           color: Colors.white, size: 20),
                       const SizedBox(width: 10),
                       Text(
-                        step.subtitle,
+                        (Platform.isIOS && step.permission == Permission.locationAlways)
+                            ? 'Continue'
+                            : step.subtitle,
                         style: GoogleFonts.poppins(
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
