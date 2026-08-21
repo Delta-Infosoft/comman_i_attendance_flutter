@@ -8,6 +8,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:waterman_iattandance/screens/my_portfolio_screen/view_model/my_portfolio_controller.dart';
 import 'package:waterman_iattandance/screens/new_customer_dealer_screen/view_model/new_customer_deal_controller.dart';
+import 'package:waterman_iattandance/widget/custom_snackbar.dart';
 import '../../../flavor_config.dart';
 
 class NewCustomerDealerScreen extends StatefulWidget {
@@ -433,9 +434,10 @@ class _NewCustomerDealerScreenState extends State<NewCustomerDealerScreen> {
 
                   if (!_formKey.currentState!.validate()) {
                     final errorMsg = _getValidationError() ?? 'Please fill all required fields';
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text(errorMsg)),
-                    );
+                     CustomSnackBar.show(message: errorMsg,isError: true);
+                    // ScaffoldMessenger.of(context).showSnackBar(
+                    //   SnackBar(content: Text(errorMsg)),
+                    // );
                     return;
                   }
 

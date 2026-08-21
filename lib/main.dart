@@ -27,11 +27,6 @@ import 'constant/api_url/api_url.dart';
 import 'flavor_config.dart';
 import 'app_theme.dart';
 
-/// Fallback entry point — used when running directly via `flutter run` without
-/// specifying a target (e.g., during development). Defaults to the Waterman flavor.
-/// For production builds always use the flavor-specific entry points:
-///   flutter build apk --flavor waterman -t lib/main_waterman.dart
-///   flutter build apk --flavor singla   -t lib/main_singla.dart
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   FlavorConfig.initialize(AppFlavor.singla);
@@ -181,74 +176,7 @@ class MyApp extends StatelessWidget {
         }),
       ),
     );
-
-    // return GetMaterialApp(
-    //   debugShowCheckedModeBanner: false,
-    //   initialBinding: AppBindings(),
-    //   builder: (context, child) {
-    //     return UpgradeAlert(
-    //       barrierDismissible: false,
-    //       showLater: false,
-    //       showIgnore: false,
-    //
-    //       upgrader: Upgrader(
-    //         debugLogging: true,
-    //         debugDisplayAlways: true,
-    //         durationUntilAlertAgain: Duration.zero,
-    //
-    //       ),
-    //       child: child ?? const SizedBox(),
-    //     );
-    //   },
-    //   home: Obx(() {
-    //     final localDb = LocalDbController.to;
-    //
-    //     return localDb.isLoggedIn.value
-    //         ? HomeScreen()
-    //         : LoginScreen();
-    //   }),
-    // );
   }
-
-  // Widget build(BuildContext context) {
-  //   return GetMaterialApp(
-  //     debugShowCheckedModeBanner: false,
-  //     initialBinding: AppBindings(),
-  //     home: Obx(() {
-  //       final localDb = LocalDbController.to;
-  //
-  //       return localDb.isLoggedIn.value
-  //           ? HomeScreen()
-  //           : LoginScreen();
-  //     }),
-  //   );
-  // }
-
-
-  // Widget build(BuildContext context) {
-  //   return GetMaterialApp(
-  //     debugShowCheckedModeBanner: false,
-  //     initialBinding: AppBindings(),
-  //     home: FutureBuilder(
-  //       future: _checkLoginStatus(),
-  //       builder: (context, snapshot) {
-  //         if (snapshot.connectionState == ConnectionState.waiting) {
-  //           return const Scaffold(
-  //             body: Center(
-  //               child: CircularProgressIndicator(),
-  //             ),
-  //           );
-  //         }
-  //
-  //         final bool isLoggedIn = snapshot.data ?? false;
-  //         return isLoggedIn ? HomeScreen() : LoginScreen();
-  //       },
-  //     ),
-  //   );
-  // }
-
-
-
 
   Future<bool> _checkLoginStatus() async {
     try {
@@ -276,58 +204,6 @@ class AppBindings extends Bindings {
     Get.lazyPut(() => DTDController(repository: Get.find()), fenix: true);
   }
 }
-
-// class AppBindings extends Bindings {
-//   @override
-//   void dependencies() {
-//     // Local DB controller should be permanent
-//     Get.put(LocalDbController(), permanent: true);
-//
-//     // HomeScreen controller (so it can be accessed anywhere)
-//     Get.lazyPut(() => HomeScreenController(), fenix: true);
-//
-//     // JourneyCycleController
-//     Get.lazyPut(() => JourneyCycleController(), fenix: true);
-//
-//     // DTD dependencies
-//     Get.lazyPut(() => DTDRepository(), fenix: true);
-//     Get.lazyPut(() => DTDController(repository: Get.find<DTDRepository>()), fenix: true);
-//   }
-// }
-
-// import 'package:flutter/material.dart';
-// import 'package:get/get.dart';
-// import 'package:firebase_core/firebase_core.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
-// import 'firebase_options.dart';
-// import 'auth/login/view/login_screen.dart';
-// import 'package:waterman_iattandance/screens/home/view/home_screen.dart';
-
-// void main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   await Firebase.initializeApp(
-//     options: DefaultFirebaseOptions.currentPlatform,
-//   );
-
-//   // Check if user is already logged in
-//   final prefs = await SharedPreferences.getInstance();
-//   final bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-
-//   runApp(MyApp(isLoggedIn: isLoggedIn));
-// }
-
-// class MyApp extends StatelessWidget {
-//   final bool isLoggedIn;
-//   const MyApp({super.key, required this.isLoggedIn});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return GetMaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: isLoggedIn ? HomeScreen() : LoginScreen(),
-//     );
-//   }
-// }
 
 class PlayStoreUpgraderStore extends UpgraderStore {
   @override

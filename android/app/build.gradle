@@ -71,13 +71,12 @@ android {
             dimension "client"
             applicationId "com.i.singla.iattendanceapp"
             resValue "string", "app_name", "Singla iAttendance"
-            versionCode 6
-            versionName "1.0.5"
+            versionCode 7
+            versionName "1.0.6"
         }
     }
     // ──────────────────────────────────────────────────────────────────────────
 
-    // ✅ SigningConfigs ko completely comment out karo ya debug ke liye chhodo
     signingConfigs {
         release {
             keyAlias keystoreProperties['keyAlias']
@@ -89,7 +88,7 @@ android {
     
     buildTypes {
         release {
-            // ✅ Debug keystore use karo (temporary testing ke liye)
+
             signingConfig signingConfigs.release
 
             ndk {
