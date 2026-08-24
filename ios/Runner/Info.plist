@@ -64,7 +64,7 @@
 		<string>_dartobservatory._tcp</string>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>This app requires access to the camera for capturing photos.</string>
+	<string>Camera access is used to capture your attendance photo during Client Check In and Check Out.</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Waterman iAttendance uses the local network to discover and connect to attendance devices and services on your organization's network.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

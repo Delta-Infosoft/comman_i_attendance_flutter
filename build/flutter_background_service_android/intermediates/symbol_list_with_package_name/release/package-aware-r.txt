@@ -1,2 +1,0 @@
-id.flutter.flutter_background_service
-drawable ic_bg_service_small
