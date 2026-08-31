@@ -18,6 +18,7 @@ class _PermissionStep {
   final String description;
   final Permission? permission;
   final bool androidOnly;
+  final bool isOptional;
   final Color color;
 
   const _PermissionStep({
@@ -27,6 +28,7 @@ class _PermissionStep {
     required this.description,
     this.permission,
     this.androidOnly = false,
+    this.isOptional = false,
     required this.color,
   });
 }
@@ -54,8 +56,9 @@ List<_PermissionStep> get _allSteps => [
     title: 'Notifications',
     subtitle: 'Allow Notifications',
     description:
-    'Push notifications keep you informed about attendance updates, approvals, and the background tracking service status.\n\nThis permission is mandatory to use the app.',
+    'Push notifications keep you informed about attendance updates, approvals, and the background tracking service status.\n\nThis permission is optional, but highly recommended.',
     permission: Permission.notification,
+    isOptional: true,
     color: _kAppRed,
   ),
   _PermissionStep(
@@ -140,30 +143,39 @@ class _PermissionVerificationScreenState
   Future<void> _initializeSteps() async {
     final validSteps =
     _allSteps.where((s) => !s.androidOnly || Platform.isAndroid).toList();
-    final List<_PermissionStep> neededSteps = [];
+    
+    final List<_PermissionStep> missingMandatory = [];
+    final List<_PermissionStep> missingOptional = [];
 
     for (final step in validSteps) {
       if (step.permission == null) continue;
       final granted = await _checkPermissionGranted(step);
-      if (!granted) neededSteps.add(step);
+      if (!granted) {
+        if (step.isOptional) {
+          missingOptional.add(step);
+        } else {
+          missingMandatory.add(step);
+        }
+      }
     }
 
     if (!mounted) return;
 
-    if (neededSteps.isEmpty) {
-      // All permissions already granted — go straight to dashboard
+    // If all mandatory permissions are granted, we can bypass the verification screen
+    // and go straight to the HomeScreen.
+    if (missingMandatory.isEmpty) {
       setState(() {
         _isLoading = false;
         _allDone = true;
       });
-      Future.delayed(const Duration(milliseconds: 1200), () {
+      Future.delayed(const Duration(milliseconds: 100), () {
         if (mounted) Get.offAll(() => const HomeScreen());
       });
       return;
     }
 
     setState(() {
-      _steps = neededSteps;
+      _steps = [...missingMandatory, ...missingOptional];
       _isLoading = false;
     });
 
@@ -416,6 +428,22 @@ class _PermissionVerificationScreenState
     _preCheckCurrentStep();
   }
 
+  // ── Skip the current optional permission step ──
+  void _skipStep() {
+    if (_currentIndex + 1 >= _steps.length) {
+      _finishAndNavigate();
+      return;
+    }
+    setState(() {
+      _currentIndex++;
+      _stepGranted = null;
+      _isRequesting = false;
+    });
+    _animController.reset();
+    _animController.forward();
+    _preCheckCurrentStep();
+  }
+
   // ── Navigate to dashboard — only when truly all done ──
   void _finishAndNavigate() {
     setState(() => _allDone = true);
@@ -541,27 +569,30 @@ class _PermissionVerificationScreenState
                 ),
               ),
               const Spacer(),
-              // Mandatory badge
+              // Mandatory/Optional badge
               Container(
                 padding:
                 const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Colors.red.shade50,
+                  color: step.isOptional ? Colors.blue.shade50 : Colors.red.shade50,
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.red.shade200),
+                  border: Border.all(color: step.isOptional ? Colors.blue.shade200 : Colors.red.shade200),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.lock_rounded,
-                        size: 12, color: Colors.red.shade600),
+                    Icon(
+                      step.isOptional ? Icons.info_outline_rounded : Icons.lock_rounded,
+                      size: 12,
+                      color: step.isOptional ? Colors.blue.shade600 : Colors.red.shade600,
+                    ),
                     const SizedBox(width: 4),
                     Text(
-                      'Required',
+                      step.isOptional ? 'Optional' : 'Required',
                       style: GoogleFonts.poppins(
                         fontSize: 11,
                         fontWeight: FontWeight.w600,
-                        color: Colors.red.shade600,
+                        color: step.isOptional ? Colors.blue.shade600 : Colors.red.shade600,
                       ),
                     ),
                   ],
@@ -655,24 +686,33 @@ class _PermissionVerificationScreenState
   // Granted / Denied status badge
   // ─────────────────────────────────────────────
   Widget _buildStatusBadge(bool granted) {
+    final step = _steps[_currentIndex];
     return AnimatedOpacity(
       opacity: 1.0,
       duration: const Duration(milliseconds: 300),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
-          color: granted ? Colors.green.shade50 : Colors.red.shade50,
+          color: granted
+              ? Colors.green.shade50
+              : (step.isOptional ? Colors.orange.shade50 : Colors.red.shade50),
           borderRadius: BorderRadius.circular(30),
           border: Border.all(
-            color: granted ? Colors.green.shade200 : Colors.red.shade200,
+            color: granted
+                ? Colors.green.shade200
+                : (step.isOptional ? Colors.orange.shade200 : Colors.red.shade200),
           ),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              granted ? Icons.check_circle_rounded : Icons.cancel_rounded,
-              color: granted ? Colors.green.shade600 : Colors.red.shade600,
+              granted
+                  ? Icons.check_circle_rounded
+                  : (step.isOptional ? Icons.info_outline_rounded : Icons.cancel_rounded),
+              color: granted
+                  ? Colors.green.shade600
+                  : (step.isOptional ? Colors.orange.shade600 : Colors.red.shade600),
               size: 20,
             ),
             const SizedBox(width: 8),
@@ -680,11 +720,15 @@ class _PermissionVerificationScreenState
               child: Text(
                 granted
                     ? 'Permission Granted ✓'
-                    : 'Permission is required — please grant it to continue',
+                    : (step.isOptional
+                        ? 'Optional permission — you can skip this step'
+                        : 'Permission is required — please grant it to continue'),
                 style: GoogleFonts.poppins(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
-                  color: granted ? Colors.green.shade700 : Colors.red.shade700,
+                  color: granted
+                      ? Colors.green.shade700
+                      : (step.isOptional ? Colors.orange.shade700 : Colors.red.shade700),
                 ),
               ),
             ),
@@ -750,9 +794,9 @@ class _PermissionVerificationScreenState
   // ─────────────────────────────────────────────
   // Bottom action buttons
   //
-  // • Not yet requested  → single "Grant Permission" button
+  // • Not yet requested  → single "Grant Permission" button (or Skip/Grant for optional)
   // • Granted            → "Continue" / "Go to Dashboard" (green)
-  // • Denied             → "Try Again" + "Open Settings" — NO continue/skip
+  // • Denied             → "Try Again" + "Open Settings" — NO continue/skip (or Skip/Try Again for optional)
   // ─────────────────────────────────────────────
   Widget _buildBottomActions(_PermissionStep step, bool isLast) {
     return Container(
@@ -804,113 +848,281 @@ class _PermissionVerificationScreenState
             ),
           ]
 
-          // ── DENIED: Try Again + Open Settings — NO skip ──
+          // ── DENIED: Try Again + Open Settings ──
           else if (_stepGranted == false) ...[
-            // Warning hint
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.info_outline_rounded,
-                      size: 15, color: Colors.red.shade400),
-                  const SizedBox(width: 6),
-                  Flexible(
-                    child: Text(
-                      'This permission is required. You cannot skip it.',
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
-                        color: Colors.red.shade500,
-                        fontWeight: FontWeight.w500,
+            if (step.isOptional) ...[
+              // Optional hint
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.info_outline_rounded,
+                        size: 15, color: Colors.blue.shade400),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        'This permission is optional. You can skip this step.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          color: Colors.blue.shade500,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  // Skip
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: Colors.grey.shade400, width: 1.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                        onPressed: _skipStep,
+                        child: Text(
+                          'Skip',
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey.shade700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  // Try Again
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: step.color,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          elevation: 0,
+                        ),
+                        onPressed:
+                        _isRequesting ? null : _requestCurrentPermission,
+                        child: _isRequesting
+                            ? const SizedBox(
+                          width: 22,
+                          height: 22,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2.5,
+                            color: Colors.white,
+                          ),
+                        )
+                            : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.refresh_rounded,
+                                color: Colors.white, size: 18),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Try Again',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ],
               ),
-            ),
-            Row(
-              children: [
-                // Open Settings
-                Expanded(
-                  child: SizedBox(
-                    height: 54,
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: step.color, width: 1.5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+            ] else ...[
+              // Warning hint
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.info_outline_rounded,
+                        size: 15, color: Colors.red.shade400),
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Text(
+                        'This permission is required. You cannot skip it.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 12,
+                          color: Colors.red.shade500,
+                          fontWeight: FontWeight.w500,
                         ),
+                        textAlign: TextAlign.center,
                       ),
-                      onPressed: _openSettings,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(Icons.settings_rounded,
-                              size: 18, color: step.color),
-                          const SizedBox(width: 6),
-                          Text(
-                            'Open Settings',
-                            style: GoogleFonts.poppins(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: step.color,
-                            ),
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                children: [
+                  // Open Settings
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: step.color, width: 1.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
                           ),
-                        ],
+                        ),
+                        onPressed: _openSettings,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.settings_rounded,
+                                size: 18, color: step.color),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Open Settings',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: step.color,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                // Try Again
-                Expanded(
-                  child: SizedBox(
-                    height: 54,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: step.color,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                        elevation: 0,
-                      ),
-                      onPressed:
-                      _isRequesting ? null : _requestCurrentPermission,
-                      child: _isRequesting
-                          ? const SizedBox(
-                        width: 22,
-                        height: 22,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2.5,
-                          color: Colors.white,
-                        ),
-                      )
-                          : Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.refresh_rounded,
-                              color: Colors.white, size: 18),
-                          const SizedBox(width: 6),
-                          Text(
-                            'Try Again',
-                            style: GoogleFonts.poppins(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white,
-                            ),
+                  const SizedBox(width: 12),
+                  // Try Again
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: step.color,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
                           ),
-                        ],
+                          elevation: 0,
+                        ),
+                        onPressed:
+                        _isRequesting ? null : _requestCurrentPermission,
+                        child: _isRequesting
+                            ? const SizedBox(
+                          width: 22,
+                          height: 22,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2.5,
+                            color: Colors.white,
+                          ),
+                        )
+                            : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.refresh_rounded,
+                                color: Colors.white, size: 18),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Try Again',
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
+                ],
+              ),
+            ],
           ]
 
-          // ── NOT YET REQUESTED: single Grant button ──
+          // ── NOT YET REQUESTED ──
           else ...[
+            if (step.isOptional) ...[
+              Row(
+                children: [
+                  // Skip Button
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          side: BorderSide(color: Colors.grey.shade400, width: 1.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                        onPressed: _skipStep,
+                        child: Text(
+                          'Skip',
+                          style: GoogleFonts.poppins(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey.shade700,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  // Grant Button
+                  Expanded(
+                    child: SizedBox(
+                      height: 54,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                          _isRequesting ? step.color.withOpacity(0.6) : step.color,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          elevation: 0,
+                        ),
+                        onPressed: _isRequesting ? null : _requestCurrentPermission,
+                        child: _isRequesting
+                            ? const SizedBox(
+                          width: 22,
+                          height: 22,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2.5,
+                            color: Colors.white,
+                          ),
+                        )
+                            : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(Icons.lock_open_rounded,
+                                color: Colors.white, size: 20),
+                            const SizedBox(width: 10),
+                            Text(
+                              step.subtitle,
+                              style: GoogleFonts.poppins(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ] else ...[
               SizedBox(
                 width: double.infinity,
                 height: 54,
@@ -954,6 +1166,7 @@ class _PermissionVerificationScreenState
                 ),
               ),
             ],
+          ],
         ],
       ),
     );
