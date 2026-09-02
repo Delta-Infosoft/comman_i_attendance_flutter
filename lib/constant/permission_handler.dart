@@ -333,17 +333,19 @@ class PermissionHandler {
       }
     }
 
-    // 6. Notification
-    final notificationStatus = await Permission.notification.status;
-    if (notificationStatus.isDenied || notificationStatus.isPermanentlyDenied) {
-      permissionItems.add(
-        PermissionItem(
-          icon: Icons.notifications,
-          title: 'Notifications',
-          description: 'We need notification access to alert you of updates.',
-          permission: Permission.notification,
-        ),
-      );
+    // 6. Notification (Excluded for Singla flavor)
+    if (!FlavorConfig.isInitialized || !FlavorConfig.instance.isSingla) {
+      final notificationStatus = await Permission.notification.status;
+      if (notificationStatus.isDenied || notificationStatus.isPermanentlyDenied) {
+        permissionItems.add(
+          PermissionItem(
+            icon: Icons.notifications,
+            title: 'Notifications',
+            description: 'We need notification access to alert you of updates.',
+            permission: Permission.notification,
+          ),
+        );
+      }
     }
 
     // 7. Battery Optimization (Android Only)
